@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+build/
+*.spec
+
+# Ficheiros de show pessoais / personal show files
+*.ldsk
+
+# Preferências locais / local prefs
+.mesadelux.json
