@@ -32,6 +32,25 @@
   desenhado pelo firmware, não pela app. Na app já é `grid.on_letter`
   (PT "L" / EN "O"). Rever só se/quando se traduzir o firmware.
 
+## Alterações v6.2 (2026-06-28, em desenvolvimento — re-enviar ao GitHub)
+- **GDTF saiu da página principal**: importa-se agora DENTRO do «Repetir
+  Aparelho» (Renumerador → Repetir Aparelho → botão «Importar GDTF…»).
+  Botão do GDTFDialog passou a «Usar esta pegada». `_open_gdtf` removido.
+- **FX em 3 modos**: Manual / Dinâmico / **Caos**.
+  - Partilhados: Curva, Direcção, Ataque, Retirada, BPM, V.alto, V.baixo.
+  - Só Dinâmico: Blocos, Carroagem, Grupos, Cruzamento.
+  - Só Caos: Caos(random), Carroagem, Repetir, **Quantidade** (novo).
+  - **Tamanho do caos (caos_size) REMOVIDO da UI** (não fazia nada).
+  - **Quantidade** (`quant_min`/`quant_max`): nº de canais sorteados por
+    combinação, aleatório entre mín e máx (min=max=fixo; limitado aos
+    seleccionados). Dois sub-comportamentos no Caos:
+      · `quant_max>0` → SELECÇÃO (sorteia k canais).
+      · `quant 0/0`   → CINTILAÇÃO: Carroagem (largura da banda) + Caos
+        (random) recuperam o efeito antigo de cintilação.
+  - Motor: `mode=='caos'`; selecção só se quant_max>0; no Caos força-se
+    G=0/sem blocos/sem cruzamento; no Dinâmico anulam-se caos/random.
+  - `.ldsk`: shows antigos com `mode:'dinamico'` continuam a abrir.
+
 ## Glossário EN dos botões (decisão do autor 2026-06-18)
 O autor escolheu termos próprios para os botões (não tradução literal):
 

@@ -221,7 +221,11 @@ FX_DIN_DEFAULTS = {'curva': 'sino', 'ataque': 5, 'retirada': 5,
                    'bpm': 60, 'carroagem': 50, 'v_alto': 100,
                    'v_baixo': 0, 'grupos': 0, 'direccao': '>',
                    'blocos': '', 'random': 0, 'caos_size': 0,
-                   'caos_rep': '', 'ritmo': 1, 'cruzamento': 0}
+                   'caos_rep': '', 'ritmo': 1, 'cruzamento': 0,
+                   # v6.2 — modo CAOS: nº de canais sorteados por combinação
+                   # é um valor aleatório entre quant_min e quant_max (0 =
+                   # nada; min=max = fixo; limitado aos canais seleccionados).
+                   'quant_min': 0, 'quant_max': 0}
 
 
 # ─────────────────────────────────────────────
@@ -279,7 +283,7 @@ STRINGS = {
         'gdtf.footprint_label': 'Pegada (DIM fica 0-100 %; os outros 0-255; '
                                 '«16» = 16 bit):',
         'gdtf.copy_btn':        'Copiar pegada',
-        'gdtf.patch_btn':       'Patchar no renumerador…',
+        'gdtf.patch_btn':       'Usar esta pegada',
         'gdtf.modes_label':     'Modos DMX:',
         'gdtf.open_title':      'Abrir GDTF',
         'gdtf.read_error':      'Não foi possível ler:\n{e}',
@@ -304,6 +308,7 @@ STRINGS = {
                                 'parâmetros do mesmo aparelho partilham-na)',
         'rep.cycle_halo':       'Ciclar cor de halo por aparelho',
         'rep.repeat_btn':       'Repetir',
+        'rep.import_gdtf':      'Importar GDTF…',
         'rep.need_one':         'Define pelo menos um canal (nome).',
         'rep.must_numbers':     'Canal/Universo/DMX/Quantidade têm de ser '
                                 'números.',
@@ -497,6 +502,7 @@ STRINGS = {
         'fxc.mode':             'Modo:',
         'fxc.manual':           'Manual  (lista de passos em cadeia)',
         'fxc.dynamic':          'Dinâmico  (ciclo contínuo paramétrico)',
+        'fxc.chaos':            'Caos  (selecção aleatória de canais)',
         # ── FXLinkDialog ──
         'fxl.title':            'FX na memória',
         'fxl.prompt':           'Nº do FX (1–{max}; vazio = tira a marca):',
@@ -510,6 +516,7 @@ STRINGS = {
         'fx.editor_cues_xf':    'Memórias (XF)',
         'fx.editor_manual':     'Edição — {nome}  (manual)',
         'fx.editor_dyn':        'Edição — {nome}  (dinâmico)',
+        'fx.editor_caos':       'Edição — {nome}  (caos)',
         'fx.col_step':          'Passo',
         'fx.col_fade':          'Fade',
         'fx.col_auto':          'Auto.',
@@ -528,6 +535,9 @@ STRINGS = {
         'fxd.v_low':            'V. baixo',
         'fxd.groups':           'Grupos',
         'fxd.chaos':            'Caos',
+        'fxd.quant_min':        'Quant. mín',
+        'fxd.quant_max':        'Quant. máx',
+        'fxd.quant_note':       '(nº de canais sorteados; 0/0 = cintilação)',
         'fxd.chaos_size':       'Tam. caos',
         'fxd.chaos_size_note':  '(>0 anula a carroagem)',
         'fxd.cross':            'Cruzam.',
@@ -694,7 +704,7 @@ STRINGS = {
         'gdtf.footprint_label': 'Footprint (DIM is 0-100 %; the rest 0-255; '
                                 '«16» = 16 bit):',
         'gdtf.copy_btn':        'Copy footprint',
-        'gdtf.patch_btn':       'Send to patch…',
+        'gdtf.patch_btn':       'Use this footprint',
         'gdtf.modes_label':     'DMX modes:',
         'gdtf.open_title':      'Open GDTF',
         'gdtf.read_error':      'Could not read:\n{e}',
@@ -719,6 +729,7 @@ STRINGS = {
                                 'the same fixture share it)',
         'rep.cycle_halo':       'Cycle halo colour per fixture',
         'rep.repeat_btn':       'Repeat',
+        'rep.import_gdtf':      'Import GDTF…',
         'rep.need_one':         'Define at least one channel (name).',
         'rep.must_numbers':     'Channel/Universe/DMX/Quantity must be '
                                 'numbers.',
@@ -910,6 +921,7 @@ STRINGS = {
         'fxc.mode':             'Mode:',
         'fxc.manual':           'Manual  (chained step list)',
         'fxc.dynamic':          'Dynamic  (parametric continuous cycle)',
+        'fxc.chaos':            'Chaos  (random channel selection)',
         # ── FXLinkDialog ──
         'fxl.title':            'FX on the cue',
         'fxl.prompt':           'FX no. (1–{max}; empty = remove mark):',
@@ -923,6 +935,7 @@ STRINGS = {
         'fx.editor_cues_xf':    'Cues (XF)',
         'fx.editor_manual':     'Editing — {nome}  (manual)',
         'fx.editor_dyn':        'Editing — {nome}  (dynamic)',
+        'fx.editor_caos':       'Editing — {nome}  (chaos)',
         'fx.col_step':          'Step',
         'fx.col_fade':          'Fade',
         'fx.col_auto':          'Auto.',
@@ -941,6 +954,9 @@ STRINGS = {
         'fxd.v_low':            'V. low',
         'fxd.groups':           'Groups',
         'fxd.chaos':            'Chaos',
+        'fxd.quant_min':        'Qty. min',
+        'fxd.quant_max':        'Qty. max',
+        'fxd.quant_note':       '(channels drawn; 0/0 = shimmer)',
         'fxd.chaos_size':       'Chaos size',
         'fxd.chaos_size_note':  '(>0 overrides Width)',
         'fxd.cross':            'Cross',
@@ -2218,18 +2234,31 @@ class Engine:
             G = max(0, min(24, int(fx.get('grupos', 0))))
         except (TypeError, ValueError):
             G = 0
-        try:
-            rnd_amt = max(0.0, min(100.0, float(fx.get('random', 0)))) / 100.0
-        except (TypeError, ValueError):
+        # v6.2 — modo CAOS EXPLÍCITO (mode=='caos'). Dois sub-comportamentos
+        # decididos pela QUANTIDADE:
+        #   · quant_max > 0  → SELECÇÃO: sorteia k canais (entre mín e máx).
+        #   · quant 0/0      → CINTILAÇÃO: o random fica livre sobre a banda
+        #                      da Carroagem (recupera o efeito antigo).
+        # No DINÂMICO não há caos/random; no CAOS não há blocos/grupos.
+        is_caos = fx.get('mode') == 'caos'
+        qmin = qmax = 0
+        if is_caos:
+            # v6.2 — o «Caos» fundiu carroagem + random num único cursor: o
+            # GRAU de desordem é FIXO (~0.55, a zona que dá boa cintilação) e
+            # o cursor «Caos» controla a CARROAGEM = % de canais envolvidos.
+            rnd_amt = 0.55
+            try:
+                qmin = int(float(fx.get('quant_min', 1)))
+            except (TypeError, ValueError):
+                qmin = 1
+            try:
+                qmax = int(float(fx.get('quant_max', 3)))
+            except (TypeError, ValueError):
+                qmax = 3
+            G = 0                       # caos não usa grupos
+        else:
             rnd_amt = 0.0
-        # TAMANHO CAOS (modo selecção): >0 anula a carroagem e sorteia k
-        # canais que acendem/apagam juntos (espec. do autor 2026-06-17)
-        try:
-            caos_size = max(0.0, min(100.0,
-                                     float(fx.get('caos_size', 0)))) / 100.0
-        except (TypeError, ValueError):
-            caos_size = 0.0
-        caos_sel = caos_size > 0.0
+        caos_sel = is_caos and qmax > 0     # selecção só com quantidade
 
         levels = fx.get('levels', {})
         n = len(chans)
@@ -2256,7 +2285,8 @@ class Engine:
         #                   AABB/12 → {1,2,5,6,9,10} ↔ {3,4,7,8,11,12}
         #     · grupos>=2 → (PROVISÓRIO, a confirmar) as instâncias do
         #                   bloco dobram-se em G fluxos
-        pat, M = self._fx_parse_blocos(fx.get('blocos', ''))
+        pat, M = ((None, 0) if is_caos
+                  else self._fx_parse_blocos(fx.get('blocos', '')))
         if pat and M >= 2:
             L = len(pat)
             letra = [pat[idx % L] for idx in range(n)]   # letra de cada canal
@@ -2308,7 +2338,7 @@ class Engine:
             cross = max(0.0, min(100.0, float(fx.get('cruzamento', 0)))) / 100.0
         except (TypeError, ValueError):
             cross = 0.0
-        if cross > 0.0 and not caos_sel:
+        if cross > 0.0 and not caos_sel and not is_caos:
             duty_eff = min(1.0, duty_eff * (1.0 + 2.0 * cross))
         off_max = (npos - 1.0) / npos if npos > 1 else 0.0
         offs = [(pp / float(npos) if npos > 1 else 0.0) for pp in pos_of]
@@ -2334,9 +2364,16 @@ class Engine:
                 else:
                     run['rj'] = {}                        # nova combinação
                     if caos_sel and n > 0:
-                        # sorteia k canais (mín. 1) — a carroagem é ignorada
-                        k = max(1, min(n, int(round(caos_size * n))))
-                        run['caos_pick'] = set(random.sample(range(n), k))
+                        # v6.2 — QUANTIDADE: o nº de canais sorteados é um
+                        # valor aleatório entre quant_min e quant_max (limitado
+                        # aos canais seleccionados). min=max = fixo.
+                        a = max(0, min(n, qmin))
+                        b = max(0, min(n, qmax))
+                        if a > b:
+                            a, b = b, a
+                        k = random.randint(a, b)
+                        run['caos_pick'] = (set(random.sample(range(n), k))
+                                            if k > 0 else set())
                     pi = run.get('caos_pi', 0)
                     run['caos_left'] = rep_pat[pi % len(rep_pat)]
                     run['caos_pi'] = pi + 1
@@ -3843,8 +3880,9 @@ class RepetirFixtureDialog(tk.Toplevel):
     def __init__(self, parent, footprint=None):
         super().__init__(parent)
         self.title(T('rep.title'))
-        self.geometry("380x400")
-        self.resizable(False, False)
+        self.geometry("460x520")
+        self.minsize(440, 500)
+        self.resizable(True, True)
         self.transient(parent)
         self.grab_set()
         self.result = None
@@ -3889,6 +3927,10 @@ class RepetirFixtureDialog(tk.Toplevel):
         self.v_foot = tk.StringVar(value=self._init_foot or 'DIM R G B W')
         ttk.Combobox(f, textvariable=self.v_foot, values=self.PRESETS,
                      width=34).pack(fill=tk.X, pady=(2, 2))
+        # v6.2 — GDTF importa-se AQUI (fecha o ciclo dentro do Repetir
+        # Aparelho), em vez de uma tecla na página principal.
+        ttk.Button(f, text=T('rep.import_gdtf'),
+                   command=self._import_gdtf).pack(anchor='w', pady=(0, 4))
         ttk.Label(f, text=T('rep.hint'),
                   foreground='#888', justify='left').pack(anchor='w',
                                                           pady=(0, 8))
@@ -3919,6 +3961,14 @@ class RepetirFixtureDialog(tk.Toplevel):
                    command=self.destroy).pack(side=tk.RIGHT)
         ttk.Button(br, text=T('rep.repeat_btn'),
                    command=self._ok).pack(side=tk.RIGHT, padx=4)
+
+    def _import_gdtf(self):
+        """v6.2 — abre o GDTFDialog e preenche a pegada com o resultado.
+        Fecha o ciclo GDTF dentro do próprio Repetir Aparelho."""
+        dlg = GDTFDialog(self)
+        self.wait_window(dlg)
+        if dlg.result:
+            self.v_foot.set(dlg.result)
 
     def _ok(self):
         foot = self.parse_footprint(self.v_foot.get())   # [(nome, is16), …]
@@ -5183,6 +5233,8 @@ class FXCreateDialog(tk.Toplevel):
                         variable=self._m, value='manual').pack(anchor='w')
         ttk.Radiobutton(rb, text=T('fxc.dynamic'),
                         variable=self._m, value='dinamico').pack(anchor='w')
+        ttk.Radiobutton(rb, text=T('fxc.chaos'),
+                        variable=self._m, value='caos').pack(anchor='w')
         f.columnconfigure(1, weight=1)
 
         btn = ttk.Frame(f)
@@ -5737,10 +5789,8 @@ class MesaDeLuxApp:
         # DMX. Roxo; vermelho quando activo.
         self._dmx_btn = _hs_btn("DMX", self._toggle_dmx_view, bg='#7a3fa0')
         self._dmx_btn.pack(side=tk.LEFT, padx=(6, 1))
-        # v6.1 — GDTF: importa um aparelho e leva-o ao renumerador
-        tk.Button(ctrl3, text="GDTF", command=self._open_gdtf, bg='#16708a',
-                  fg='white', font=('Arial', 11, 'bold'), relief=tk.FLAT,
-                  width=5, pady=4, cursor='hand2').pack(side=tk.LEFT, padx=1)
+        # v6.2 — GDTF saiu da página principal: importa-se agora DENTRO do
+        # «Repetir Aparelho» (Renumerador → Repetir Aparelho → Importar GDTF).
         # (v5: a etiqueta de "X canais seleccionados" foi retirada — era
         #  redundante; a grelha já mostra a selecção a amarelo.)
 
@@ -6522,24 +6572,6 @@ class MesaDeLuxApp:
         self._draw_dmx()
         self._refresh()
 
-    def _open_gdtf(self):
-        """v6.1 — GDTF: abre o GDTFDialog (ler ficheiro, escolher modo,
-        gerar footprint). Se o utilizador carregar «Patchar no
-        renumerador…», abre o renumerador com o Repetir Aparelho já
-        pré-preenchido com o footprint do aparelho importado."""
-        dlg = GDTFDialog(self.root)
-        self.root.wait_window(dlg)
-        if not dlg.result:
-            return
-        pd = PatchDialog(self.root, self.engine, repetir_footprint=dlg.result)
-        self.root.wait_window(pd)
-        # o patch pode ter mudado: alinha saída + defeitos + consola
-        self.engine.sync_sacn_outputs()
-        self.engine.apply_defaults_to_passive()
-        self._refresh_status()
-        self._push_all_channel_names()
-        self._refresh()
-
     def _open_channel_patch(self):
         """R — com 1 canal abre o renumerador completo desse canal; com VÁRIOS
         abre um diálogo para dar NOME / HALO / ALCUNHA comuns a todos."""
@@ -6943,7 +6975,7 @@ class MesaDeLuxApp:
         if action == 'actualiza':
             fx_e = (self.engine.fx[self._fx_edit]
                     if self._fx_edit is not None else None)
-            if fx_e and fx_e.get('mode') == 'dinamico':
+            if fx_e and fx_e.get('mode') in ('dinamico', 'caos'):
                 self._fx_armed = None
                 self._refresh_fx_action_btns()
                 self._fx_append_selection()
@@ -7022,10 +7054,14 @@ class MesaDeLuxApp:
                 'steps': list(old.get('steps', [])),
                 'channels': list(old.get('channels', [])),
                 'levels': dict(old.get('levels', {}))}
-        if modo == 'dinamico':
+        if modo in ('dinamico', 'caos'):
             # parâmetros do ciclo — preserva os antigos numa re-compra
+            # (dinâmico e caos partilham o mesmo conjunto de campos)
             for k, v in FX_DIN_DEFAULTS.items():
                 novo[k] = old.get(k, v)
+            # caos NOVO nasce estreito (Caos=1); re-compra preserva o valor
+            if modo == 'caos' and 'carroagem' not in old:
+                novo['carroagem'] = 1
         self.engine.fx[i] = novo
         self.engine.fx_active[i] = False
         self.engine._fx_run[i] = None
@@ -7061,7 +7097,7 @@ class MesaDeLuxApp:
         FX DINÂMICO compra a SELECÇÃO de canais + níveis base."""
         fx_e = (self.engine.fx[self._fx_edit]
                 if self._fx_edit is not None else None)
-        if fx_e and fx_e.get('mode') == 'dinamico':
+        if fx_e and fx_e.get('mode') in ('dinamico', 'caos'):
             self._fx_buy_selection()
             return
         i, fx = self._fx_edited_manual()
@@ -7341,10 +7377,15 @@ class MesaDeLuxApp:
         self._fx_refresh_editor(force=True)
 
     def _fx_build_editor_din(self, i, fx, nome):
-        """Painel de parâmetros do FX DINÂMICO — compacto, em 2 colunas,
-        sem textos de instruções (pedido do autor; o manual de uso vive
-        no CLAUDE_V5.md). Tudo mexe EM VIVO."""
-        self._fx_editor.config(text=T('fx.editor_dyn', nome=nome))
+        """Painel de parâmetros do FX DINÂMICO ou CAOS — compacto, 2 colunas.
+        v6.2: cada modo mostra só os seus controlos.
+          · partilhados: Curva, Ataque, Retirada, BPM, V.alto, V.baixo
+          · só dinâmico: Direcção, Blocos, Carroagem, Grupos, Cruzamento
+          · só caos:     Quantidade (mín/máx), Caos, Repetir
+        Tudo mexe EM VIVO."""
+        is_caos = fx.get('mode') == 'caos'
+        self._fx_editor.config(text=T('fx.editor_caos' if is_caos
+                                      else 'fx.editor_dyn', nome=nome))
         self._fx_din_chlbl = ttk.Label(self._fx_editor,
                                        font=('Arial', 9, 'bold'))
         self._fx_din_chlbl.pack(anchor='nw', pady=(0, 4))
@@ -7355,7 +7396,7 @@ class MesaDeLuxApp:
         pf.columnconfigure(0, weight=1)
         pf.columnconfigure(1, weight=1)
 
-        # linha 0: curva (sino/PWM) + direcção (> < <>) + blocos
+        # ── linha 0: curva + direcção (partilhados); blocos só no dinâmico ──
         row = ttk.Frame(pf)
         row.grid(row=0, column=0, columnspan=2, sticky='ew', pady=(0, 2))
         ttk.Label(row, text=T('fxd.curve'), width=9).pack(side=tk.LEFT)
@@ -7367,40 +7408,42 @@ class MesaDeLuxApp:
         cb.pack(side=tk.LEFT)
         cb.bind('<<ComboboxSelected>>',
                 lambda ev: self._fx_din_set('curva', cv.get()))
-        ttk.Label(row, text=T('fxd.dir')).pack(side=tk.LEFT)
-        dv = tk.StringVar(value=fx.get('direccao', '>')
-                          if fx.get('direccao') in ('>', '<', '<>') else '>')
-        db = ttk.Combobox(row, textvariable=dv, state='readonly', width=4,
-                          values=['>', '<', '<>'])
-        db.pack(side=tk.LEFT, padx=(2, 0))
-        db.bind('<<ComboboxSelected>>',
-                lambda ev: self._fx_din_set('direccao', dv.get()))
-        ttk.Label(row, text=T('fxd.blocks')).pack(side=tk.LEFT)
-        bv = tk.StringVar(value=str(fx.get('blocos', '')))
-        be = ttk.Entry(row, textvariable=bv, width=9)
-        be.pack(side=tk.LEFT, padx=(2, 0))
-        self._fx_blocos_fb = ttk.Label(row, foreground='#666688')
-        self._fx_blocos_fb.pack(side=tk.LEFT, padx=(4, 0))
+        if not is_caos:
+            # Direcção e Blocos só fazem sentido no dinâmico
+            ttk.Label(row, text=T('fxd.dir')).pack(side=tk.LEFT)
+            dv = tk.StringVar(value=fx.get('direccao', '>')
+                              if fx.get('direccao') in ('>', '<', '<>') else '>')
+            db = ttk.Combobox(row, textvariable=dv, state='readonly', width=4,
+                              values=['>', '<', '<>'])
+            db.pack(side=tk.LEFT, padx=(2, 0))
+            db.bind('<<ComboboxSelected>>',
+                    lambda ev: self._fx_din_set('direccao', dv.get()))
+            ttk.Label(row, text=T('fxd.blocks')).pack(side=tk.LEFT)
+            bv = tk.StringVar(value=str(fx.get('blocos', '')))
+            be = ttk.Entry(row, textvariable=bv, width=9)
+            be.pack(side=tk.LEFT, padx=(2, 0))
+            self._fx_blocos_fb = ttk.Label(row, foreground='#666688')
+            self._fx_blocos_fb.pack(side=tk.LEFT, padx=(4, 0))
 
-        def _blocos_mudou(*_a):
-            s = bv.get().strip().upper()
-            self._fx_din_set('blocos', s)
-            if not s:
-                txt = ""
-            else:
-                pat, mm = Engine._fx_parse_blocos(s)
-                if pat is None:
-                    txt = T('fxd.blk_invalid')
-                elif mm >= 2:
-                    txt = T('fxd.blk_info', n=len(s), mm=mm)
+            def _blocos_mudou(*_a):
+                s = bv.get().strip().upper()
+                self._fx_din_set('blocos', s)
+                if not s:
+                    txt = ""
                 else:
-                    txt = T('fxd.blk_one')
-            if self._fx_blocos_fb.winfo_exists():
-                self._fx_blocos_fb.config(text=txt)
-        bv.trace_add('write', _blocos_mudou)
-        _blocos_mudou()
+                    pat, mm = Engine._fx_parse_blocos(s)
+                    if pat is None:
+                        txt = T('fxd.blk_invalid')
+                    elif mm >= 2:
+                        txt = T('fxd.blk_info', n=len(s), mm=mm)
+                    else:
+                        txt = T('fxd.blk_one')
+                if self._fx_blocos_fb.winfo_exists():
+                    self._fx_blocos_fb.config(text=txt)
+            bv.trace_add('write', _blocos_mudou)
+            _blocos_mudou()
 
-        # sliders em 2 colunas (4 linhas) — cabem todos sem cortar
+        # ── sliders em 2 colunas ──
         def _slider(rotulo, key, frm, to, r, c):
             cell = ttk.Frame(pf)
             cell.grid(row=r, column=c, sticky='ew', padx=(0, 8))
@@ -7413,31 +7456,50 @@ class MesaDeLuxApp:
             sc.set(fx.get(key, FX_DIN_DEFAULTS.get(key, 0)))
             sc.pack(side=tk.LEFT, fill=tk.X, expand=True)
 
-        _slider(T('fxd.attack'),  'ataque',    0,  10, 1, 0)
-        _slider(T('fxd.decay'),   'retirada',  0,  10, 1, 1)
-        _slider(T('fxd.bpm'),     'bpm',       1, 360, 2, 0)
-        _slider(T('fxd.width'),   'carroagem', 1,  99, 2, 1)
-        _slider(T('fxd.v_high'),  'v_alto',    0, 100, 3, 0)
-        _slider(T('fxd.v_low'),   'v_baixo',   0, 100, 3, 1)
-        _slider(T('fxd.groups'),  'grupos',    0,  24, 4, 0)
-        # "Caos" no UI (pedido do autor); a chave interna continua
-        # 'random' para não partir shows já gravados
-        _slider(T('fxd.chaos'),   'random',    0, 100, 4, 1)
-        # Tamanho do caos (modo selecção): >0 anula a carroagem e sorteia
-        # k = caos_size% × nº canais para acenderem juntos (mín. 1)
-        # v6.2: CRUZAMENTO — sobreposição entre blocos/bandas vizinhos
-        # (0 = sequencial; 100 ≈ quase simultâneo). NÃO afecta o Caos.
-        _slider(T('fxd.cross'), 'cruzamento', 0, 100, 5, 0)
-        ttk.Label(pf, text=T('fxd.cross_note'), foreground='#666688'
-                  ).grid(row=5, column=1, sticky='w')
-        _slider(T('fxd.chaos_size'), 'caos_size', 0, 100, 6, 0)
-        ttk.Label(pf, text=T('fxd.chaos_size_note'), foreground='#666688'
-                  ).grid(row=6, column=1, sticky='w')
+        # partilhados (os dois modos)
+        _slider(T('fxd.attack'), 'ataque',   0,  10, 1, 0)
+        _slider(T('fxd.decay'),  'retirada', 0,  10, 1, 1)
+        _slider(T('fxd.bpm'),    'bpm',      1, 360, 2, 0)
 
-        # Repete (caos): padrão de números — nº de batidas seguidas que a
-        # mesma combinação aleatória se mantém antes de mudar (1=muda sempre)
+        if not is_caos:
+            # ── DINÂMICO: carroagem, grupos, cruzamento ──
+            _slider(T('fxd.width'),  'carroagem', 1,  99, 2, 1)
+            _slider(T('fxd.v_high'), 'v_alto',    0, 100, 3, 0)
+            _slider(T('fxd.v_low'),  'v_baixo',   0, 100, 3, 1)
+            _slider(T('fxd.groups'), 'grupos',    0,  24, 4, 0)
+            # CRUZAMENTO — sobreposição entre blocos/bandas vizinhos
+            _slider(T('fxd.cross'),  'cruzamento', 0, 100, 4, 1)
+            ttk.Label(pf, text=T('fxd.cross_note'), foreground='#666688'
+                      ).grid(row=5, column=0, columnspan=2, sticky='w')
+            return
+
+        # ── CAOS ──
+        # cursor único «Caos» (funde carroagem + random): controla a % de
+        # canais envolvidos na desordem; o grau de random é fixo no motor.
+        # Fica entre a Retirada e o V.baixo (r2,c1).
+        _slider(T('fxd.chaos'),  'carroagem', 1,  99, 2, 1)
+        _slider(T('fxd.v_high'), 'v_alto',    0, 100, 3, 0)
+        _slider(T('fxd.v_low'),  'v_baixo',   0, 100, 3, 1)
+        # Quantidade (mín/máx): nº de canais sorteados; 0/0 = cintilação
+        qrow = ttk.Frame(pf)
+        qrow.grid(row=4, column=0, columnspan=2, sticky='ew', pady=(4, 0))
+        ttk.Label(qrow, text=T('fxd.quant_min'), width=9).pack(side=tk.LEFT)
+        qmin = tk.StringVar(value=str(int(fx.get('quant_min', 0))))
+        ttk.Entry(qrow, textvariable=qmin, width=5).pack(side=tk.LEFT)
+        ttk.Label(qrow, text=T('fxd.quant_max'),
+                  width=9).pack(side=tk.LEFT, padx=(8, 0))
+        qmax = tk.StringVar(value=str(int(fx.get('quant_max', 0))))
+        ttk.Entry(qrow, textvariable=qmax, width=5).pack(side=tk.LEFT)
+        qmin.trace_add('write',
+                       lambda *_a: self._fx_din_set('quant_min', qmin.get()))
+        qmax.trace_add('write',
+                       lambda *_a: self._fx_din_set('quant_max', qmax.get()))
+        ttk.Label(pf, text=T('fxd.quant_note'), foreground='#666688'
+                  ).grid(row=5, column=0, columnspan=2, sticky='w')
+
+        # Repete (caos): nº de batidas que a mesma combinação se mantém
         crow = ttk.Frame(pf)
-        crow.grid(row=7, column=0, columnspan=2, sticky='ew', pady=(4, 0))
+        crow.grid(row=6, column=0, columnspan=2, sticky='ew', pady=(4, 0))
         ttk.Label(crow, text=T('fxd.repeat'), width=9).pack(side=tk.LEFT)
         rv = tk.StringVar(value=str(fx.get('caos_rep', '')))
         re_ = ttk.Entry(crow, textvariable=rv, width=14)
@@ -7457,9 +7519,6 @@ class MesaDeLuxApp:
                 self._fx_caosrep_fb.config(text=txt)
         rv.trace_add('write', _caosrep_mudou)
         _caosrep_mudou()
-        # (o RITMO foi retirado da UI a pedido do autor 2026-06-12 — a
-        # primeira abordagem não correspondia à ideia dele; redesenhar
-        # em conjunto antes de voltar a entrar)
 
     def _fx_refresh_editor(self, force=False):
         """Actualiza a lista de passos (com cache — chamada no _refresh a
@@ -7510,7 +7569,7 @@ class MesaDeLuxApp:
         v_alto/v_baixo (espec. do autor). Re-comprar substitui."""
         i = self._fx_edit
         fx = self.engine.fx[i] if i is not None else None
-        if not fx or fx.get('mode') != 'dinamico':
+        if not fx or fx.get('mode') not in ('dinamico', 'caos'):
             return
         sel = sorted(c for c in self._selected if 1 <= c <= NUM_CHANNELS)
         if not sel:
@@ -7531,7 +7590,7 @@ class MesaDeLuxApp:
         Para recomeçar a ordem usa-se Comprar 2× (substitui)."""
         i = self._fx_edit
         fx = self.engine.fx[i] if i is not None else None
-        if not fx or fx.get('mode') != 'dinamico':
+        if not fx or fx.get('mode') not in ('dinamico', 'caos'):
             return
         sel = sorted(c for c in self._selected if 1 <= c <= NUM_CHANNELS)
         if not sel:
@@ -7554,7 +7613,7 @@ class MesaDeLuxApp:
         no FX em edição. O motor lê em vivo: ouve-se logo a mudança."""
         i = self._fx_edit
         fx = self.engine.fx[i] if i is not None else None
-        if not fx or fx.get('mode') != 'dinamico':
+        if not fx or fx.get('mode') not in ('dinamico', 'caos'):
             return
         if key == 'curva':
             fx[key] = ('pwm' if str(value).lower() in ('pwm', 'quadrada')
@@ -7696,14 +7755,17 @@ class MesaDeLuxApp:
             if not fx:
                 b.config(text=f"FX {i + 1}", bg='#2c2c44', fg='#666677')
                 continue
-            manual = fx.get('mode') == 'manual'
-            txt = f"{fx.get('name') or f'FX {i + 1}'}  ·{'M' if manual else 'D'}"
+            mode = fx.get('mode')
+            badge = {'manual': 'M', 'caos': 'C'}.get(mode, 'D')
+            txt = f"{fx.get('name') or f'FX {i + 1}'}  ·{badge}"
             if self._fx_edit == i:
                 b.config(text="✎ " + txt, bg='#f1c40f', fg='#222222')
             elif self.engine.fx_active[i]:
                 b.config(text=txt, bg='#27ae60', fg='white')
-            elif manual:
+            elif mode == 'manual':
                 b.config(text=txt, bg='#8a5e14', fg='white')   # manual: âmbar escuro
+            elif mode == 'caos':
+                b.config(text=txt, bg='#a0356a', fg='white')   # caos: magenta-rosa
             else:
                 b.config(text=txt, bg='#5a3a7a', fg='white')   # dinâmico: violeta
 
