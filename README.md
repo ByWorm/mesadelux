@@ -14,16 +14,20 @@ Python + Tkinter).
 ### O que faz
 - Lista de memórias (cues) com tempos de entrada/saída, atrasos, AUTO e LOOP.
 - Renumerador (patch) com importação **GDTF**, 8/16 bit, curvas e cores de halo.
-- **16 efeitos (FX)** — manuais (passos em cadeia) e dinâmicos (paramétricos).
+- **16 efeitos (FX)** — manuais (passos em cadeia), dinâmicos (paramétricos) e Caos.
 - Looks, Grupos e Submasters.
 - Saída **sACN (E1.31)** e **Art-Net** em paralelo.
-- Entrada **OSC** — controla a partir de consolas físicas ou apps OSC
-  (ex.: TouchOSC). Ver o protocolo em [`DEVELOPMENT.md`](DEVELOPMENT.md).
+- Entrada **OSC** — controla a partir de consolas físicas ou apps OSC (ex.: TouchOSC).
+  Ver o protocolo no menu Ajuda → Ajuda OSC ou em [`DEVELOPMENT.md`](DEVELOPMENT.md).
+- **MIDI IN/OUT por cue** — sincronização com QLab, vídeo ou qualquer
+  dispositivo MIDI. Cada cue pode receber uma nota para disparar (`IN`) ou
+  enviar uma nota ao executar (`OUT`), com atraso configurável.
 
 ### Como correr
-- **Windows:** abre `mesadelux_v6_2_i18n.exe` (não precisa de instalar nada).
+- **Windows:** abre `mesadelux_v6_3.exe` (não precisa de instalar nada).
 - **Do código:** `pip install sacn python-osc` e depois
-  `python mesadelux_v6_2_i18n.py`.
+  `python mesadelux_v6_3.py`.
+- **MIDI (opcional):** `pip install mido python-rtmidi`
 
 ### Idioma
 A app arranca em português. Para mudar para inglês:
@@ -47,16 +51,20 @@ It runs on Windows (and from source on any system with Python + Tkinter).
 ### What it does
 - Cue list with fade in/out, delays, AUTO-follow and LOOP.
 - Patch with **GDTF** import, 8/16 bit, curves and halo colours.
-- **16 effects (FX)** — manual (chained steps) and dynamic (parametric).
+- **16 effects (FX)** — manual (chained steps), dynamic (parametric) and Chaos.
 - Looks, Groups and Submasters.
 - **sACN (E1.31)** and **Art-Net** output in parallel.
-- **OSC** input — control it from physical consoles or OSC apps
-  (e.g. TouchOSC). See the protocol in [`DEVELOPMENT.md`](DEVELOPMENT.md).
+- **OSC** input — control it from physical consoles or OSC apps (e.g. TouchOSC).
+  See the protocol in the Help menu → OSC Help or in [`DEVELOPMENT.md`](DEVELOPMENT.md).
+- **MIDI IN/OUT per cue** — sync with QLab, video or any MIDI device. Each cue
+  can receive a note to trigger it (`IN`) or send a note when it runs (`OUT`),
+  with configurable delay.
 
 ### How to run
-- **Windows:** open `mesadelux_v6_2_i18n.exe` (nothing to install).
+- **Windows:** open `mesadelux_v6_3.exe` (nothing to install).
 - **From source:** `pip install sacn python-osc`, then
-  `python mesadelux_v6_2_i18n.py`.
+  `python mesadelux_v6_3.py`.
+- **MIDI (optional):** `pip install mido python-rtmidi`
 
 ### Language
 The app starts in Portuguese. To switch to English:
