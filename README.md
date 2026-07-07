@@ -24,14 +24,19 @@ Python + Tkinter).
   enviar uma nota ao executar (`OUT`), com atraso configurável.
 - **Import/Export USITT ASCII** (`.asc`/`.alq`) — troca de shows com outras
   mesas (ETC Eos/Ion, Strand, Avolites…): menu Ficheiro → Importar/Exportar
-  ASCII. Viajam as cues (tempos, texto, AUTO, saltos, níveis), o patch de
-  intensidade, grupos e submasters; o formato nativo `.ldsk` continua a
-  guardar tudo (MIDI, FX, looks, alcunhas, curvas…).
+  ASCII. Viajam as cues (tempos, texto, AUTO, saltos, níveis, partes), o
+  patch de intensidade, grupos e submasters; o formato nativo `.ldsk`
+  continua a guardar tudo (MIDI, FX, looks, alcunhas, curvas…).
+- **PARTES** — até 8 divisões por memória, cada uma com os seus canais,
+  tempos de entrada/saída e atrasos próprios, e FX próprio: vários eventos
+  em simultâneo num só GO (ex.: um efeito a entrar em 5 s enquanto o
+  ciclorama muda em 30 s). Tecla PARTE: seleccionar canais → PARTE → menu.
+  Compatível com o `PART` do USITT ASCII (validado com ETC Eos).
 
 ### Como correr
-- **Windows:** abre `mesadelux_v6_3_2.exe` (não precisa de instalar nada).
+- **Windows:** abre `mesadelux_v6_3_3.exe` (não precisa de instalar nada).
 - **Do código:** `pip install sacn python-osc` e depois
-  `python mesadelux_v6_3_2.py`.
+  `python mesadelux_v6_3_3.py`.
 - **MIDI (opcional):** `pip install mido python-rtmidi`
 
 ### Idioma
@@ -66,14 +71,19 @@ It runs on Windows (and from source on any system with Python + Tkinter).
   with configurable delay.
 - **USITT ASCII Import/Export** (`.asc`/`.alq`) — exchange shows with other
   desks (ETC Eos/Ion, Strand, Avolites…): File menu → Import/Export ASCII.
-  Cues (times, text, AUTO, jumps, levels), intensity patch, groups and
-  submasters travel; the native `.ldsk` format still stores everything
+  Cues (times, text, AUTO, jumps, levels, parts), intensity patch, groups
+  and submasters travel; the native `.ldsk` format still stores everything
   (MIDI, FX, looks, nicknames, curves…).
+- **PARTS** — up to 8 divisions per cue, each with its own channels,
+  in/out times and delays, and its own FX: several events at once on a
+  single GO (e.g. an effect fading in over 5 s while the cyclorama
+  changes over 30 s). PART key: select channels → PART → menu.
+  Compatible with USITT ASCII `PART` (validated against ETC Eos).
 
 ### How to run
-- **Windows:** open `mesadelux_v6_3_2.exe` (nothing to install).
+- **Windows:** open `mesadelux_v6_3_3.exe` (nothing to install).
 - **From source:** `pip install sacn python-osc`, then
-  `python mesadelux_v6_3_2.py`.
+  `python mesadelux_v6_3_3.py`.
 - **MIDI (optional):** `pip install mido python-rtmidi`
 
 ### Language
