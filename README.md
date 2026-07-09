@@ -32,11 +32,17 @@ Python + Tkinter).
   em simultâneo num só GO (ex.: um efeito a entrar em 5 s enquanto o
   ciclorama muda em 30 s). Tecla PARTE: seleccionar canais → PARTE → menu.
   Compatível com o `PART` do USITT ASCII (validado com ETC Eos).
+- **DMX-In (escuta sACN)** — escuta o sACN de outra mesa (ETC Eos, GrandMA…,
+  mesmo no mesmo computador) e os valores recebidos entram AO VIVO no
+  programador (a rosa), traduzidos pelo renumerador. Grava-se com
+  Comprar/Actualizar como qualquer look — captura de espectáculos de outra
+  mesa, memória a memória. Configurações → DMX-In (universos, interface,
+  indicador de recepção). Só escuta: nada é gravado sem ordem.
 
 ### Como correr
-- **Windows:** abre `mesadelux_v6_3_3.exe` (não precisa de instalar nada).
+- **Windows:** abre `mesadelux_v6_4.exe` (não precisa de instalar nada).
 - **Do código:** `pip install sacn python-osc` e depois
-  `python mesadelux_v6_3_3.py`.
+  `python mesadelux_v6_4.py`.
 - **MIDI (opcional):** `pip install mido python-rtmidi`
 
 ### Idioma
@@ -79,11 +85,17 @@ It runs on Windows (and from source on any system with Python + Tkinter).
   single GO (e.g. an effect fading in over 5 s while the cyclorama
   changes over 30 s). PART key: select channels → PART → menu.
   Compatible with USITT ASCII `PART` (validated against ETC Eos).
+- **DMX-In (sACN listen)** — listens to sACN from another desk (ETC Eos,
+  GrandMA…, even on the same computer) and the received values feed the
+  programmer LIVE (in pink), translated through the patch. Record with
+  Take/Update like any look — capture shows from another desk, cue by
+  cue. Settings → DMX-In (universes, interface, reception indicator).
+  Listen only: nothing is recorded without your command.
 
 ### How to run
-- **Windows:** open `mesadelux_v6_3_3.exe` (nothing to install).
+- **Windows:** open `mesadelux_v6_4.exe` (nothing to install).
 - **From source:** `pip install sacn python-osc`, then
-  `python mesadelux_v6_3_3.py`.
+  `python mesadelux_v6_4.py`.
 - **MIDI (optional):** `pip install mido python-rtmidi`
 
 ### Language

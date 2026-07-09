@@ -203,6 +203,174 @@ Plano completo em `MESADELUX_V633_PLANO_PARTS.md`. Ficheiro
     coluna; entre partes, a de nº maior). A coluna FX MANTÉM-SE (é o
     FX da parte 1) — decisão discutida com o autor 2026-07-08.
 
+## Retrato expande pela ALCUNHA (v6.3.3d, 2026-07-08)
+- Pedido do autor: num aparelho com alcunha (ex.: parled RGBW = 600
+  DIM + 600 R/G/B/W), dar valor ao DIM e chamar um retrato com o B a
+  255 devia actuar no aparelho — sem ter de seleccionar o B.
+- `Engine.alias_family(chs)`: expande um conjunto de canais pelas
+  alcunhas (>0) presentes — a alcunha marca «mesmo aparelho». O
+  `_retrato_click` com selecção passa a chamar
+  `recall_retrato(idx, only=alias_family(selecção))`.
+- Canais sem alcunha: comportamento v6.2 intacto (só os
+  seleccionados). A selecção visível NÃO muda (não se juntam os
+  canais expandidos) — só o recall alarga. Aparelhos com OUTRA
+  alcunha não são tocados. Mesma filosofia do Solo por alias.
+
+## Renumerador: coluna toda + Enter salta (v6.3.3e, 2026-07-08)
+- Pedido do autor (colunas 8/16 bit): (1) seleccionar a coluna TODA;
+  (2) Enter numa célula solta salta para a de baixo (digitar
+  endereços em série); com intervalo seleccionado fica como estava.
+- Clicar no CABEÇALHO de uma coluna de valores (alcunha/nome/univ/
+  8 bit/16 bit/defeito) selecciona 1..N (`_select_column`, cursor
+  hand2, foco na 1.ª célula, scroll ao topo); 2.º clique desfaz.
+  Escreve-se na 1.ª célula + Enter → preenche como o intervalo
+  arrastado (8/16 bit ascendente, etc.).
+- `_range_enter(col, ch)` substituiu o bind do Enter: com intervalo
+  activo na coluna → `_range_fill` (igual); sem intervalo → foco na
+  célula ch+1 com o texto pré-seleccionado + scroll do canvas
+  (`self._canvas` guardado no _build) para a manter visível.
+- `patch.hint` actualizado (PT/EN).
+
+## Renumerador: MARCAS de 16 bits (v6.3.3f, 2026-07-08)
+- Problema do autor: o «Repetir Aparelho» patcha bem os 16 bits NO
+  carimbo, mas faltava a via para patchar/re-patchar À POSTERIORI.
+- Desenho final (do autor): cada canal pode estar **ASSINALADO como
+  16 bits** — fundo VERDE (`MARK16_BG #2e4d33`) na célula 16 bit.
+  A marca (`_bit16_mark`, set de canais) vem de: patch existente
+  (bit16/fine), nome …16 (DIM16/PAN16), Repetir Aparelho (assinala
+  ao carimbar), e **botão DIREITO** na célula 16 bit (toggle,
+  `_toggle_bit16`). `_paint_bit16` pinta; `_highlight_range` usa a
+  marca como fundo base da coluna 16 bit.
+- Preenchimento da coluna 8 bit (intervalo OU coluna toda): canais
+  ASSINALADOS consomem 2 endereços (pares 1,2 · 3,4 · …) e o fine
+  escreve-se sozinho; os outros +1. Enter numa célula SOLTA de um
+  canal assinalado também emparelha logo (fine = valor+1). Sem
+  marcas = comportamento antigo. Liberdade manual intacta: encher
+  8+16 à mão continua a fazer um canal 16 bits (o Aplicar deriva
+  bit16 do fine, como sempre). patch.hint actualizado (PT/EN).
+
+## Alterações v6.4 (2026-07-08) — DMX-IN, Etapa 1 (só escuta)
+Spec do autor em `MESADELUX_V64_DMXIN_SPEC.md` (Downloads → guardar
+junto ao projecto). Ficheiro `mesadelux_v6_4.py` (v6.3.3 intacta).
+- **EscutaDMXIn** (secção própria antes da SELECÇÃO DE CANAIS):
+  recepção sACN com a biblioteca `sacn` (a MESMA da saída — zero
+  dependências novas; decisão da spec confirmada). Thread isolada,
+  snapshot com lock, `esta_a_receber()` (silêncio > 2 s). NÃO toca
+  no motor de saída, no show nem no `.ldsk`.
+- **DESCOBERTA desta máquina (2026-07-08):** a firewall do Windows
+  bloqueia UDP loopback em sockets 0.0.0.0 — com a mesa de origem
+  NO MESMO PC (GMA3/Eos em unicast p/ 127.0.0.1), a escuta tem de
+  fazer bind a 127.0.0.1. Por isso a interface é CONFIGURÁVEL
+  (0.0.0.0 / 127.0.0.1 / IPs locais). Validado em loopback real.
+- **UI:** Configurações → separador «DMX-In» (ligar/desligar,
+  universos «1,2», interface, estado A RECEBER/Silêncio por
+  universo 2x/s, nota explicativa). Valores ao vivo na grelha:
+  crachá CIANO no canto sup. direito de cada célula (0-255 bruto,
+  traduzido pelo renumerador universo+endereço→canal; 16 bits
+  mostra o coarse). Só aparece com a escuta ligada; ciclo
+  root.after 100 ms (10x/s), redesenho só quando muda (entra no
+  tuplo de estado das células). Aviso se o universo escutado
+  coincidir com a saída própria ACTIVA (sACN/Art-Net).
+- **Preferências** (~/.mesadelux.json): `dmx_in_universos` +
+  `dmx_in_bind` (máquina, não show). Escuta arranca sempre OFF.
+- **test_dmx_in.py** (na pasta): script isolado da spec — corre
+  sozinho, imprime pacotes/mudanças; 2.º argumento = interface. Aplica
+  o mesmo filtro da app.
+- **FIX pisca-pisca (2026-07-08, reportado pelo autor):** o valor
+  «piscava» apesar de a receber. Causa: a Eos/GrandMA intercalam no
+  mesmo universo pacotes de PRIORIDADE POR ENDEREÇO (E1.31 start code
+  0xDD, valores 0-200) com os dados de nível (start code 0x00) — o
+  callback aceitava ambos e o crachá saltava entre o nível e a
+  prioridade. Correcção em `EscutaDMXIn._faz_cb`: ignora `dmxStartCode
+  != 0` e `option_PreviewData` (blind), e ARBITRA a fonte por universo
+  (`_fonte[u]=(nome,prioridade,hora)`): trava numa fonte — só a assume
+  outra se tiver prioridade MAIOR, for a mesma, ou a actual ficar calada
+  > 2 s. Isto também mata o pisca entre a Eos e o nosso próprio output
+  no mesmo universo. Testado deterministicamente (callback com pacotes
+  falsos: start code, preview, prioridade, takeover, silêncio).
+- **Etapa 2 — CAPTURA AO VIVO (2026-07-09, redesenho do autor):**
+  1.ª versão tinha um botão «Capturar» (snapshot pontual → programador);
+  o autor pediu para o tirar — o DMX-In deve entrar DIRECTO e ao vivo no
+  programador, e grava-se com **Comprar** (Take = memória nova) /
+  **Actualizar** (Update = existente) como qualquer look. (O botão
+  snapshot também tinha um bug: ao gravar 2 memórias e passar, o crachá
+  deixava de ser repintado e os valores «desapareciam».)
+  · `_dmx_in_tick` (10x/s) alimenta o PROGRAMADOR: para cada canal com
+    patch e valor recebido > 0, `set_channel(ch, bruto)` (0-255 tal e
+    qual — raw-vs-curva resolvido pela regra do autor: interno 255 mostra
+    dec 255 OU pct 100 %); reaplica mesmo depois de um Comprar limpar o
+    programador (o DMX-In continua a mandar → resolve o bug dos valores
+    que sumiam); canal que cai a 0 é libertado (`clear_channel`).
+  · **Cor distinta:** canais conduzidos pelo DMX-In (`_din_driven`) ficam
+    azul-CIANO (fill `#0f3a4a`, outline `#2fb6c8`) vs o azul normal do
+    programador — o crachá do canto (Etapa 1) foi REMOVIDO (o valor é
+    agora o próprio número da célula).
+  · **Libertação bloqueada** enquanto o DMX-In entra (`_din_bloqueia` em
+    `_on_liberta` e no 2.º toque do `_on_clear` — os valores voltavam
+    logo; desligar a escuta primeiro). Desligar a escuta = FREEZE: os
+    valores ficam como programador NORMAL (azul), a libertação volta a
+    funcionar, o look não se perde.
+  · Sem controlo OSC da Eos (avança-se à mão). i18n `din.no_release`.
+    NÃO escreve no `.ldsk` (feeding do programador não entra no
+    `_show_data`, logo não marca «por gravar»).
+- **FIX «a receber mas nada na grelha» (2026-07-09):** o próprio output
+  sACN da app fazia loopback na mesma máquina; escutar o mesmo universo
+  que se emite → a arbitragem anti-pisca travava na NOSSA fonte (zeros/
+  cue actual) em vez da Eos → indicador «a receber» (o nosso output) mas
+  grelha vazia. Correcção: o sender sACN de saída passou a ter
+  `source_name=SACN_SOURCE_NAME` ('MesaDeLux') e o receptor DMX-In IGNORA
+  essa fonte (`_faz_cb`: `if src == SACN_SOURCE_NAME: return`). Assim,
+  com output+escuta no mesmo universo, a app captura SÓ a mesa externa;
+  se só houver o nosso output, mostra «Silêncio» (honesto). `test_dmx_in.py`
+  melhorado: imprime TODOS os endereços com valor (endereço:valor) para
+  cruzar com o patch. (Diagnóstico: a grelha só mostra canais PATCHADOS
+  no universo+endereço onde a Eos põe o valor — as 3 pontas têm de
+  alinhar: output da Eos ↔ universo escutado ↔ patch.)
+- **FIX «diz Silêncio a receber» (2026-07-09):** o indicador
+  A-RECEBER/Silêncio tinha 2 problemas. (1) `_ultima` (timestamp do
+  indicador) só se actualizava quando a arbitragem ACEITAVA o pacote —
+  uma 2.ª fonte que perdesse a arbitragem não contava → dizia «Silêncio»
+  a receber. Passou a actualizar-se para QUALQUER fonte externa
+  (start-code 0, não-preview, não a nossa), fora do bloco de arbitragem;
+  o VALOR mostrado continua a seguir a arbitragem. (2) `SILENCIO_S` subiu
+  de 2,0 → **2,5 s** (o timeout de perda de dados da norma E1.31; a Eos
+  espaça envios quando o valor é estático e 2,0 s dava falso «Silêncio»).
+- Etapa 3 (merge num show existente, mapeamento de slots) e as ideias
+  mais arrojadas (app avança a Eos por OSC, gravação semi-automática)
+  ficam para depois — ver roadmap na spec.
+
+## v6.4 — afinações pós-teste real (2026-07-09/10)
+- **Cor DMX-In = ROSA/magenta** (fill #7d1f4a, contorno #ff6ba6,
+  número #ffc0dc) — decisão do autor; distinta do vermelho da PARTE,
+  do azul do programador, do laranja FX e do violeta submaster.
+- **Indicador «a segurar último look (fonte)»** a âmbar quando a
+  fonte pára de enviar mas há look captado (fontes send-on-change,
+  como Eos onPC, só transmitem quando algo MUDA — não é avaria);
+  «sem sinal» só se nunca chegou nada; A RECEBER verde. `estado(u)`
+  devolve (rx, fonte, idade, tem_look). SILENCIO_S=2,5 s (E1.31) e
+  o timestamp conta QUALQUER fonte externa (não só a dona).
+- **Libertação vs DMX-In:** clear_programmer/release_output ganharam
+  `exclude`; LIBERTA/LIMPA/Esc libertam o manual e deixam os canais
+  do DMX-In (voltavam na tick seguinte); menu «Liberta» =
+  `_liberta_total` (libertação total num clique — programador +
+  verdes ao defeito, FX off; só fica o DMX-In); Esc = 2-toques como
+  a tecla; `/release_all` da consola também exclui o DMX-In (a rampa
+  lutava com o tick). Desligar a escuta = freeze (vira azul normal).
+- **Aviso (AUTO) do cabeçalho corrigido:** lia o follow da cue
+  ACTUAL (semântica antiga) e rotulava a cue errada; agora lê o da
+  cue que ENTRA via `_peek_next_index` (loop-aware) = o motor.
+- **FIX PARTes na Eos (espectáculo grande):** o TEXT da cue ANTES do
+  PART 1 baralhava o parser da Eos (as partes não entravam). Numa
+  cue COM partes o TEXT escreve-se DEPOIS de todas as partes (é
+  onde a Eos o põe — confirmado no export real dela); sem partes
+  fica como sempre. Import: TEXT antes dos CHAN da parte = label da
+  parte; depois (parte já com canais) = label da CUE.
+- Settings 500x560 e redimensionável (o separador DMX-In não cabia).
+- Revisão i18n 2026-07-10: paridade PT/EN total (0 chaves em falta),
+  placeholders coerentes; chaves mortas inofensivas mantidas
+  (din.silencio/no_release, fxd.chaos_size*, settings.osc_help_tab,
+  app.title).
+
 ## Glossário EN dos botões (decisão do autor 2026-06-18)
 O autor escolheu termos próprios para os botões (não tradução literal):
 
