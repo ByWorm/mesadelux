@@ -6,6 +6,10 @@ Firmware MicroPython das duas consolas físicas da MESADELUX. Cada consola
 liga-se à app por WiFi (OSC/UDP) ou por USB através do bridge (ver a pasta
 [`bridge/`](../bridge)).
 
+![Consola 1 (em cima) e Consola 2 (em baixo)](consolas.jpg)
+
+*Consola 1 (em cima, caixa aberta) e Consola 2 (em baixo).*
+
 ### As duas consolas
 
 - **`pico_consola1_v5/`** — consola principal: encoders, display OLED
@@ -50,6 +54,10 @@ Ver [`hardware/ligacoes.md`](../hardware/ligacoes.md).
 MicroPython firmware for the two MESADELUX physical consoles. Each console
 connects to the app over WiFi (OSC/UDP) or over USB through the bridge
 (see the [`bridge/`](../bridge) folder).
+
+![Console 1 (top) and Console 2 (bottom)](consolas.jpg)
+
+*Console 1 (top, box open) and Console 2 (bottom).*
 
 ### The two consoles
 

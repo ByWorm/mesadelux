@@ -56,7 +56,10 @@ Os pinos abaixo vêm directamente do firmware (`firmware/…/main.py`).
 
 ### Esquema
 
-TODO: fotografia ou esquema das ligações.
+Fotografia das duas consolas em [`firmware/consolas.jpg`](../firmware/consolas.jpg)
+(Consola 1 em cima, de caixa aberta; Consola 2 em baixo).
+
+TODO: esquema das ligações.
 
 ---
 
@@ -115,6 +118,9 @@ The pins below come straight from the firmware (`firmware/…/main.py`).
 
 ### Schematic
 
-TODO: photo or wiring diagram.
+Photo of both consoles in [`firmware/consolas.jpg`](../firmware/consolas.jpg)
+(Console 1 on top, box open; Console 2 below).
+
+TODO: wiring diagram.
 
 By Worm
