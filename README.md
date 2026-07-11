@@ -39,6 +39,15 @@ Python + Tkinter).
   mesa, memória a memória. Configurações → DMX-In (universos, interface,
   indicador de recepção). Só escuta: nada é gravado sem ordem.
 
+### O que inclui este repositório
+- **raiz** — a app MESADELUX (`mesadelux_v6_4.py` / `.exe`)
+- [`firmware/`](firmware) — firmware MicroPython das duas consolas físicas
+  (Raspberry Pi Pico W)
+- [`bridge/`](bridge) — ponte USB/OSC entre as consolas e a app, com GUI
+- [`hardware/`](hardware) — componentes e ligações das consolas
+- [`touchosc/`](touchosc) — layout TouchOSC de exemplo (telemóvel/tablet)
+- [`exemplos/`](exemplos) — ficheiros de show de demonstração
+
 ### Como correr
 - **Windows:** abre `mesadelux_v6_4.exe` (não precisa de instalar nada).
 - **Do código:** `pip install sacn python-osc` e depois
@@ -54,8 +63,10 @@ A app arranca em português. Para mudar para inglês:
 [AGPL-3.0](LICENSE). Software livre: podes usar, estudar, alterar e partilhar —
 desde que as alterações fiquem também livres sob a mesma licença.
 
-> Nota: o firmware das consolas físicas **não** está incluído aqui. O protocolo
-> OSC está documentado para quem quiser construir o seu próprio controlador.
+> O firmware das consolas físicas está na pasta [`firmware/`](firmware) e o
+> protocolo OSC está documentado — qualquer pessoa pode construir o seu
+> próprio controlador. Uso por conta e risco: isto controla equipamento de
+> palco real.
 
 ---
 
@@ -92,6 +103,16 @@ It runs on Windows (and from source on any system with Python + Tkinter).
   cue. Settings → DMX-In (universes, interface, reception indicator).
   Listen only: nothing is recorded without your command.
 
+### What's in this repository
+- **root** — the MESADELUX app (`mesadelux_v6_4.py` / `.exe`)
+- [`firmware/`](firmware) — MicroPython firmware for the two physical
+  consoles (Raspberry Pi Pico W)
+- [`bridge/`](bridge) — USB/OSC bridge between the consoles and the app,
+  with a GUI
+- [`hardware/`](hardware) — console parts list and wiring
+- [`touchosc/`](touchosc) — sample TouchOSC layout (phone/tablet)
+- [`exemplos/`](exemplos) — demo show files
+
 ### How to run
 - **Windows:** open `mesadelux_v6_4.exe` (nothing to install).
 - **From source:** `pip install sacn python-osc`, then
@@ -107,5 +128,6 @@ The app starts in Portuguese. To switch to English:
 [AGPL-3.0](LICENSE). Free software: use, study, modify and share — provided
 your changes stay free under the same license.
 
-> Note: the physical consoles' firmware is **not** included here. The OSC
-> protocol is documented so anyone can build their own controller.
+> The physical consoles' firmware lives in [`firmware/`](firmware) and the
+> OSC protocol is documented — anyone can build their own controller. Use
+> at your own risk: this drives real stage equipment.

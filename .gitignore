@@ -1,11 +1,50 @@
-# Python
+# ============================================================
+# MESADELUX — .gitignore
+# ============================================================
+
+# --- Segredos (NUNCA versionar) ---------------------------
+secrets.py
+secrets.json
+config_local.py
+*.secret
+wifi_config.py
+wifi.txt
+
+# --- Python -----------------------------------------------
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# --- PyInstaller (builds locais) --------------------------
 build/
+dist/
 *.spec
 
-# Ficheiros de show pessoais / personal show files
-*.ldsk
+# --- MicroPython ------------------------------------------
+*.mpy
 
-# Preferências locais / local prefs
+# --- Ficheiros de show pessoais ---------------------------
+# (excepto os exemplos publicados na pasta exemplos/)
+*.ldsk
+!exemplos/*.ldsk
+
+# --- Preferências locais ----------------------------------
 .mesadelux.json
+bridge_config_v5.json
+
+# --- Sistema operativo ------------------------------------
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# --- IDE --------------------------------------------------
+.vscode/
+.idea/
+
+# --- Ficheiros de trabalho / temporários ------------------
+*.tmp
+*.bak
+*.log
