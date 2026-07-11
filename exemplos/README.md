@@ -69,12 +69,17 @@ no resto — óptimo para identificar projectores um a um.
 
 ![Highlight com Solo](quickstart_solo.jpg)
 
-#### 3. Gravar memórias (cues)
+#### 3. A tecla TAKE (comprar) — sempre em dois toques
 
-Põe os níveis (clica e arrasta na grelha, ou usa os pré-valores
-0%/25%/50%/75%/100% e +5/−5) e prime **TAKE**: aparece o diálogo da
-memória — número, etiqueta, fade in/out, atrasos e AUTO (vazio = sem
-auto-follow; 0 = segue logo a seguir à transição). **SAVE** grava.
+Regra geral da mesa: a tecla **TAKE** funciona sempre em **dois toques** —
+o primeiro arma, o segundo grava. É assim para tudo: memórias, grupos,
+looks, FX e submasters.
+
+Para gravar uma memória (cue): põe os níveis (clica e arrasta na grelha,
+ou usa os pré-valores 0%/25%/50%/75%/100% e +5/−5) e prime **TAKE duas
+vezes**: aparece o diálogo da memória — número, etiqueta, fade in/out,
+atrasos e AUTO (vazio = sem auto-follow; 0 = segue logo a seguir à
+transição). **SAVE** grava.
 
 ![TAKE — gravar uma memória](quickstart_take_cue.jpg)
 
@@ -85,18 +90,30 @@ lista.
 
 - Um **Grupo** guarda uma selecção de canais; um **Look** guarda níveis.
 - Selecciona os canais (ou monta o estado que queres), prime **TAKE** e
-  clica na tecla de Grupo ou de Look onde queres gravar.
+  depois a tecla de Grupo ou de Look onde queres gravar (o segundo toque
+  grava lá).
 
 #### 5. Efeitos (FX)
 
-Na página **FX**, cada uma das 16 teclas responde aos dois botões do rato:
+Criar um FX: prime **TAKE** e depois a tecla FX que queres usar — abre um
+menu para escolher o **tipo** (dinâmico, Caos ou manual) e o editor abre
+automaticamente.
 
-- **Botão esquerdo** — liga/desliga o FX (toggle).
-- **Botão direito** — abre o **editor** desse FX.
+- **Dinâmico e Caos**: com o editor aberto, selecciona na grelha os canais
+  que o efeito vai usar e prime **TAKE duas vezes** — os canais ficam
+  tomados pelo FX. Depois afina os parâmetros no editor.
+- **Manual**: igual, mas passo a passo — selecciona os canais, dá-lhes um
+  valor e prime **TAKE duas vezes** para gravar o passo; podes escolher o
+  fade e o tempo de avanço automático, que se repetem nos passos
+  seguintes.
 
-Para criar um FX: selecciona na grelha os canais que o efeito vai usar,
-prime **TAKE** e clica na tecla FX de destino; depois edita com o botão
-direito. Os três tipos:
+Com a tecla FX:
+
+- **Botão esquerdo** — arranca/pára o FX (toggle) — funciona mesmo com o
+  editor aberto.
+- **Botão direito** — abre o editor; outro botão direito fecha-o.
+
+Os três tipos:
 
 **Dinâmico (·D)** — paramétrico: curva (sino…), direcção, BPM,
 attack/decay, largura, blocos/grupos e cruzamento entre vizinhos.
@@ -189,12 +206,16 @@ touching anything else — great for identifying fixtures one by one.
 
 ![Highlight with Solo](quickstart_solo.jpg)
 
-#### 3. Recording cues
+#### 3. The TAKE key — always two presses
 
-Set your levels (click and drag on the grid, or use the presets
-0%/25%/50%/75%/100% and +5/−5) and press **TAKE**: the cue dialog opens —
-number, label, fade in/out, delays and AUTO (empty = no auto-follow;
-0 = starts right after the transition). **SAVE** records it.
+General rule of the desk: the **TAKE** key always works in **two
+presses** — the first arms, the second records. That applies to
+everything: cues, groups, looks, FX and submasters.
+
+To record a cue: set your levels (click and drag on the grid, or use the
+presets 0%/25%/50%/75%/100% and +5/−5) and press **TAKE twice**: the cue
+dialog opens — number, label, fade in/out, delays and AUTO (empty = no
+auto-follow; 0 = starts right after the transition). **SAVE** records it.
 
 ![TAKE — recording a cue](quickstart_take_cue.jpg)
 
@@ -204,18 +225,30 @@ number, label, fade in/out, delays and AUTO (empty = no auto-follow;
 
 - A **Group** stores a channel selection; a **Look** stores levels.
 - Select the channels (or build the state you want), press **TAKE** and
-  click the Group or Look key where you want to record it.
+  then the Group or Look key where you want to record it (the second
+  press records there).
 
 #### 5. Effects (FX)
 
-On the **FX** page, each of the 16 keys answers to both mouse buttons:
+To create an FX: press **TAKE** and then the FX key you want to use — a
+menu opens to choose the **type** (dynamic, Chaos or manual) and the
+editor opens automatically.
 
-- **Left click** — switches the FX on/off (toggle).
-- **Right click** — opens that FX's **editor**.
+- **Dynamic and Chaos**: with the editor open, select on the grid the
+  channels the effect will use and press **TAKE twice** — the channels
+  are taken by the FX. Then tune the parameters in the editor.
+- **Manual**: same idea, but step by step — select the channels, give
+  them a value and press **TAKE twice** to record the step; you can set
+  the fade and the auto-advance time, which repeat on the following
+  steps.
 
-To create an FX: select on the grid the channels the effect will use,
-press **TAKE** and click the target FX key; then edit it with the right
-button. The three types:
+On the FX key:
+
+- **Left click** — starts/stops the FX (toggle) — works even with the
+  editor open.
+- **Right click** — opens the editor; another right click closes it.
+
+The three types:
 
 **Dynamic (·D)** — parametric: curve (sine…), direction, BPM,
 attack/decay, width, blocks/groups and crossing between neighbours.
