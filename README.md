@@ -40,7 +40,8 @@ Python + Tkinter).
   indicador de recepção). Só escuta: nada é gravado sem ordem.
 
 ### O que inclui este repositório
-- **raiz** — a app MESADELUX (`mesadelux_v6_4.py` / `.exe`)
+- **raiz** — a app MESADELUX (`mesadelux_v6_4_2.py` / `.exe`; `dmx_usb.py`
+  é o módulo de saída USB-DMX)
 - [`firmware/`](firmware) — firmware MicroPython das duas consolas físicas
   (Raspberry Pi Pico W)
 - [`bridge/`](bridge) — ponte USB/OSC entre as consolas e a app, com GUI
@@ -49,10 +50,12 @@ Python + Tkinter).
 - [`exemplos/`](exemplos) — ficheiros de show de demonstração
 
 ### Como correr
-- **Windows:** abre `mesadelux_v6_4.exe` (não precisa de instalar nada).
+- **Windows:** abre `mesadelux_v6_4_2.exe` (não precisa de instalar nada).
 - **Do código:** `pip install sacn python-osc` e depois
-  `python mesadelux_v6_4.py`.
+  `python mesadelux_v6_4_2.py`.
 - **MIDI (opcional):** `pip install mido python-rtmidi`
+- **USB-DMX (opcional):** `pip install pyserial` (com o `dmx_usb.py` ao
+  lado da app)
 
 ### Idioma
 A app arranca em português. Para mudar para inglês:
@@ -104,7 +107,8 @@ It runs on Windows (and from source on any system with Python + Tkinter).
   Listen only: nothing is recorded without your command.
 
 ### What's in this repository
-- **root** — the MESADELUX app (`mesadelux_v6_4.py` / `.exe`)
+- **root** — the MESADELUX app (`mesadelux_v6_4_2.py` / `.exe`;
+  `dmx_usb.py` is the USB-DMX output module)
 - [`firmware/`](firmware) — MicroPython firmware for the two physical
   consoles (Raspberry Pi Pico W)
 - [`bridge/`](bridge) — USB/OSC bridge between the consoles and the app,
@@ -114,10 +118,12 @@ It runs on Windows (and from source on any system with Python + Tkinter).
 - [`exemplos/`](exemplos) — demo show files
 
 ### How to run
-- **Windows:** open `mesadelux_v6_4.exe` (nothing to install).
+- **Windows:** open `mesadelux_v6_4_2.exe` (nothing to install).
 - **From source:** `pip install sacn python-osc`, then
-  `python mesadelux_v6_4.py`.
+  `python mesadelux_v6_4_2.py`.
 - **MIDI (optional):** `pip install mido python-rtmidi`
+- **USB-DMX (optional):** `pip install pyserial` (with `dmx_usb.py` next
+  to the app)
 
 ### Language
 The app starts in Portuguese. To switch to English:

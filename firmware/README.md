@@ -12,7 +12,7 @@ liga-se à app por WiFi (OSC/UDP) ou por USB através do bridge (ver a pasta
 
 ### As duas consolas
 
-- **`pico_consola1_v5/`** — consola principal: encoders, display OLED
+- **`pico_consola1_v6/`** — consola principal: encoders, display OLED
   (SSD1306), teclas de memórias e GO.
   - `main.py` — programa principal
   - `rotary.py`, `rotary_irq_rp2.py` — leitura dos encoders
@@ -61,7 +61,7 @@ connects to the app over WiFi (OSC/UDP) or over USB through the bridge
 
 ### The two consoles
 
-- **`pico_consola1_v5/`** — main console: encoders, OLED display (SSD1306),
+- **`pico_consola1_v6/`** — main console: encoders, OLED display (SSD1306),
   cue keys and GO.
   - `main.py` — main program
   - `rotary.py`, `rotary_irq_rp2.py` — encoder reading
