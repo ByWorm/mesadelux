@@ -29,6 +29,22 @@ Para abrir: **Ficheiro → Abrir** e escolher o `.ldsk`.
 - **3 efeitos (FX)** gravados — dinâmico, Caos e manual — para ligar e
   desligar na página FX ou a partir das memórias.
 
+### Novidades da v6.4.2 — experimenta com o exempl2
+
+Duas teclas novas desta versão, boas de experimentar com este show:
+
+- **AGARRA/LARGA (catch/drop)** — congela canais no valor em que estão.
+  Prime **AGARRA**: os canais do programador (azuis) e os seleccionados
+  ficam agarrados — GO, LIBERTA, LIMPA e Comprar/Actualizar **não lhes
+  mexem** (mas os valores agarrados entram na gravação de cues como
+  qualquer azul). Útil para segurar uma luz de serviço ou um recorte
+  enquanto a sequência anda. Prime outra vez (**LARGA**) e eles voltam em
+  fade ao valor da memória em curso.
+- **P/T** — selecção por atributo PAN/TILT. Com aparelhos seleccionados,
+  a tecla roda **P/T → PAN → TILT**: expande a selecção pela alcunha e
+  filtra só os canais de pan ou de tilt — apontar projectores móveis sem
+  andar à procura dos canais certos.
+
 ### Quick Start — primeiros passos
 
 #### 1. Fazer o patch
@@ -165,6 +181,21 @@ To open it: **File → Open** and pick the `.ldsk`.
 
 - **3 recorded effects (FX)** — dynamic, Chaos and manual — to toggle from
   the FX page or from the cues.
+
+### New in v6.4.2 — try it with exempl2
+
+Two new keys in this version, worth trying with this show:
+
+- **CATCH/DROP** — freezes channels at their current value. Press
+  **CATCH**: the programmer (blue) channels and the selected ones are
+  caught — GO, RELEASE, CLEAR and Take/Update **won't touch them** (but
+  the caught values do enter cue recordings like any blue channel).
+  Handy to hold a working light or a special while the sequence runs.
+  Press again (**DROP**) and they fade back to the current cue's value.
+- **P/T** — selection by PAN/TILT attribute. With fixtures selected, the
+  key cycles **P/T → PAN → TILT**: it expands the selection by nickname
+  and filters just the pan or tilt channels — point moving lights without
+  hunting for the right channels.
 
 ### Quick Start — first steps
 
