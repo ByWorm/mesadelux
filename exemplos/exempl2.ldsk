@@ -1,5 +1,5 @@
 {
-  "num_channels": 120,
+  "num_channels": 150,
   "intensity_mode": "cue_only",
   "patch": {
     "1": {
@@ -492,7 +492,7 @@
       "bit16": false,
       "fine": [],
       "halo": null,
-      "display": "dec",
+      "display": "pct",
       "default": null,
       "name": "PUBLIC",
       "alcunha": 0,
@@ -506,7 +506,7 @@
       "bit16": false,
       "fine": [],
       "halo": null,
-      "display": "dec",
+      "display": "pct",
       "default": null,
       "name": "PUBLIC",
       "alcunha": 0,
@@ -1701,6 +1701,466 @@
       "name": "FANS",
       "alcunha": 609,
       "curva": "linear"
+    },
+    "121": {
+      "universe": 4,
+      "addrs": [
+        1
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "vermelho",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1001,
+      "curva": "linear"
+    },
+    "122": {
+      "universe": 4,
+      "addrs": [
+        2
+      ],
+      "bit16": true,
+      "fine": [
+        3
+      ],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1001,
+      "curva": "linear"
+    },
+    "123": {
+      "universe": 4,
+      "addrs": [
+        4
+      ],
+      "bit16": true,
+      "fine": [
+        5
+      ],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1001,
+      "curva": "linear"
+    },
+    "124": {
+      "universe": 4,
+      "addrs": [
+        6
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1002,
+      "curva": "linear"
+    },
+    "125": {
+      "universe": 4,
+      "addrs": [
+        7
+      ],
+      "bit16": true,
+      "fine": [
+        8
+      ],
+      "halo": "laranja",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1002,
+      "curva": "linear"
+    },
+    "126": {
+      "universe": 4,
+      "addrs": [
+        9
+      ],
+      "bit16": true,
+      "fine": [
+        10
+      ],
+      "halo": "laranja",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1002,
+      "curva": "linear"
+    },
+    "127": {
+      "universe": 4,
+      "addrs": [
+        11
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "amarelo",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1003,
+      "curva": "linear"
+    },
+    "128": {
+      "universe": 4,
+      "addrs": [
+        12
+      ],
+      "bit16": true,
+      "fine": [
+        13
+      ],
+      "halo": "amarelo",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1003,
+      "curva": "linear"
+    },
+    "129": {
+      "universe": 4,
+      "addrs": [
+        14
+      ],
+      "bit16": true,
+      "fine": [
+        15
+      ],
+      "halo": "amarelo",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1003,
+      "curva": "linear"
+    },
+    "130": {
+      "universe": 4,
+      "addrs": [
+        16
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "verde",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1004,
+      "curva": "linear"
+    },
+    "131": {
+      "universe": 4,
+      "addrs": [
+        17
+      ],
+      "bit16": true,
+      "fine": [
+        18
+      ],
+      "halo": "verde",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1004,
+      "curva": "linear"
+    },
+    "132": {
+      "universe": 4,
+      "addrs": [
+        19
+      ],
+      "bit16": true,
+      "fine": [
+        20
+      ],
+      "halo": "verde",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1004,
+      "curva": "linear"
+    },
+    "133": {
+      "universe": 4,
+      "addrs": [
+        21
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "ciano",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1005,
+      "curva": "linear"
+    },
+    "134": {
+      "universe": 4,
+      "addrs": [
+        22
+      ],
+      "bit16": true,
+      "fine": [
+        23
+      ],
+      "halo": "ciano",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1005,
+      "curva": "linear"
+    },
+    "135": {
+      "universe": 4,
+      "addrs": [
+        24
+      ],
+      "bit16": true,
+      "fine": [
+        25
+      ],
+      "halo": "ciano",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1005,
+      "curva": "linear"
+    },
+    "136": {
+      "universe": 4,
+      "addrs": [
+        26
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1006,
+      "curva": "linear"
+    },
+    "137": {
+      "universe": 4,
+      "addrs": [
+        27
+      ],
+      "bit16": true,
+      "fine": [
+        28
+      ],
+      "halo": "azul",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1006,
+      "curva": "linear"
+    },
+    "138": {
+      "universe": 4,
+      "addrs": [
+        29
+      ],
+      "bit16": true,
+      "fine": [
+        30
+      ],
+      "halo": "azul",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1006,
+      "curva": "linear"
+    },
+    "139": {
+      "universe": 4,
+      "addrs": [
+        31
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "magenta",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1007,
+      "curva": "linear"
+    },
+    "140": {
+      "universe": 4,
+      "addrs": [
+        32
+      ],
+      "bit16": true,
+      "fine": [
+        33
+      ],
+      "halo": "magenta",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1007,
+      "curva": "linear"
+    },
+    "141": {
+      "universe": 4,
+      "addrs": [
+        34
+      ],
+      "bit16": true,
+      "fine": [
+        35
+      ],
+      "halo": "magenta",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1007,
+      "curva": "linear"
+    },
+    "142": {
+      "universe": 4,
+      "addrs": [
+        36
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "branco",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1008,
+      "curva": "linear"
+    },
+    "143": {
+      "universe": 4,
+      "addrs": [
+        37
+      ],
+      "bit16": true,
+      "fine": [
+        38
+      ],
+      "halo": "branco",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1008,
+      "curva": "linear"
+    },
+    "144": {
+      "universe": 4,
+      "addrs": [
+        39
+      ],
+      "bit16": true,
+      "fine": [
+        40
+      ],
+      "halo": "branco",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1008,
+      "curva": "linear"
+    },
+    "145": {
+      "universe": 4,
+      "addrs": [
+        41
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "cinzento",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1009,
+      "curva": "linear"
+    },
+    "146": {
+      "universe": 4,
+      "addrs": [
+        42
+      ],
+      "bit16": true,
+      "fine": [
+        43
+      ],
+      "halo": "cinzento",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1009,
+      "curva": "linear"
+    },
+    "147": {
+      "universe": 4,
+      "addrs": [
+        44
+      ],
+      "bit16": true,
+      "fine": [
+        45
+      ],
+      "halo": "cinzento",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1009,
+      "curva": "linear"
+    },
+    "148": {
+      "universe": 4,
+      "addrs": [
+        46
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "vermelho",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1010,
+      "curva": "linear"
+    },
+    "149": {
+      "universe": 4,
+      "addrs": [
+        47
+      ],
+      "bit16": true,
+      "fine": [
+        48
+      ],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1010,
+      "curva": "linear"
+    },
+    "150": {
+      "universe": 4,
+      "addrs": [
+        49
+      ],
+      "bit16": true,
+      "fine": [
+        50
+      ],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1010,
+      "curva": "linear"
     }
   },
   "cues": [
@@ -2333,6 +2793,116 @@
       "midi_nota": null,
       "midi_direccao": null,
       "midi_delay_s": 0.0
+    },
+    {
+      "num": 17.0,
+      "label": "",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {
+        "121": 255,
+        "122": 167,
+        "123": 94,
+        "124": 255,
+        "125": 167,
+        "126": 94,
+        "127": 255,
+        "128": 167,
+        "129": 94,
+        "130": 255,
+        "131": 167,
+        "132": 94,
+        "133": 255,
+        "134": 167,
+        "135": 94
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 18.0,
+      "label": "",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {
+        "121": 255,
+        "124": 255,
+        "127": 255,
+        "130": 255,
+        "133": 255,
+        "136": 255,
+        "137": 134,
+        "138": 154,
+        "139": 255,
+        "140": 134,
+        "141": 154,
+        "142": 255,
+        "143": 134,
+        "144": 154,
+        "145": 255,
+        "146": 134,
+        "147": 154,
+        "148": 255,
+        "149": 134,
+        "150": 154
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 19.0,
+      "label": "",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {
+        "121": 89,
+        "123": 75,
+        "124": 89,
+        "126": 75,
+        "127": 89,
+        "129": 75,
+        "130": 89,
+        "132": 75,
+        "133": 89,
+        "135": 75,
+        "136": 89,
+        "138": 75,
+        "139": 89,
+        "141": 75,
+        "142": 89,
+        "144": 75,
+        "145": 89,
+        "147": 75,
+        "148": 89,
+        "150": 75
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 20.0,
+      "label": "",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {},
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
     }
   ],
   "presets": [
@@ -2596,8 +3166,28 @@
         112
       ]
     },
-    null,
-    null,
+    {
+      "name": "MH L1",
+      "halo": "vermelho",
+      "channels": [
+        121,
+        124,
+        127,
+        130,
+        133
+      ]
+    },
+    {
+      "name": "MH L2",
+      "halo": "vermelho",
+      "channels": [
+        136,
+        139,
+        142,
+        145,
+        148
+      ]
+    },
     {
       "name": "RED",
       "halo": "vermelho",
@@ -2848,16 +3438,13 @@
   "sacn_universes": [
     1,
     2,
-    3
+    3,
+    4
   ],
   "output_cfg": {
-    "universes_auto": true,
-    "manual_universes": [
-      1
-    ],
     "sacn_multicast": true,
     "sacn_unicast_ip": "192.168.1.10",
-    "artnet_enabled": false,
+    "artnet_enabled": true,
     "artnet_broadcast": true,
     "artnet_dest_ip": "192.168.1.10"
   }

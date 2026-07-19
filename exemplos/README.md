@@ -6,7 +6,7 @@ Ficheiros de demonstração para experimentar a MESADELUX sem começar do zero.
 
 ### Conteúdo
 
-- `exempl.ldsk` — ficheiro de show de demonstração (120 canais).
+- `exempl2.ldsk` — ficheiro de show de demonstração (150 canais).
 
 Para abrir: **Ficheiro → Abrir** e escolher o `.ldsk`.
 
@@ -18,7 +18,7 @@ Para abrir: **Ficheiro → Abrir** e escolher o `.ldsk`.
   um relé e um directo, e aparelhos LED multi-parâmetro (601–609) com
   atributos R/G/B, mistura (BM), cinzento (GY), STROBE, ZOOM e FANS —
   agrupados por alcunha (o mesmo aparelho partilha o número).
-- **16 memórias (cues)** que demonstram as funcionalidades: tempos de
+- **21 memórias (cues)** que demonstram as funcionalidades: tempos de
   entrada/saída com atrasos (`3+10s`), AUTO-follow, LOOP (`→13 ∞`),
   PARTES (coluna PART), CAOS em fade e em corte, FX ligados às
   memórias (⚡ imediato / ∿ acompanha o fade) e MIDI IN/OUT por cue.
@@ -143,7 +143,7 @@ Demo files to try MESADELUX without starting from scratch.
 
 ### Contents
 
-- `exempl.ldsk` — demo show file (120 channels).
+- `exempl2.ldsk` — demo show file (150 channels).
 
 To open it: **File → Open** and pick the `.ldsk`.
 
@@ -155,7 +155,7 @@ To open it: **File → Open** and pick the `.ldsk`.
   a relay and a direct, plus multi-parameter LED fixtures (601–609) with
   R/G/B, mix (BM), grey (GY), STROBE, ZOOM and FANS attributes — grouped
   by nickname (the same fixture shares the number).
-- **16 cues** demonstrating the features: in/out times with delays
+- **21 cues** demonstrating the features: in/out times with delays
   (`3+10s`), AUTO-follow, LOOP (`→13 ∞`), PARTS (PART column), CHAOS in
   fade and in cut, FX linked to cues (⚡ immediate / ∿ follows the fade)
   and per-cue MIDI IN/OUT.

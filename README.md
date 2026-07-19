@@ -17,6 +17,10 @@ Python + Tkinter).
 - **16 efeitos (FX)** — manuais (passos em cadeia), dinâmicos (paramétricos) e Caos.
 - Looks, Grupos e Submasters.
 - Saída **sACN (E1.31)** e **Art-Net** em paralelo.
+- Saída **USB-DMX** — adaptadores baratos tipo "Open DMX" (FTDI; testado
+  com o DSD TECH SH-RS09B), em paralelo com o sACN e o Art-Net. Liga o
+  adaptador, menu **Configurações → USB-DMX**, e sai DMX directo pelo
+  cabo — sem nó de rede nem hardware caro.
 - Entrada **OSC** — controla a partir de consolas físicas ou apps OSC (ex.: TouchOSC).
   Ver o protocolo no menu Ajuda → Ajuda OSC ou em [`DEVELOPMENT.md`](DEVELOPMENT.md).
 - **MIDI IN/OUT por cue** — sincronização com QLab, vídeo ou qualquer
@@ -84,6 +88,10 @@ It runs on Windows (and from source on any system with Python + Tkinter).
 - **16 effects (FX)** — manual (chained steps), dynamic (parametric) and Chaos.
 - Looks, Groups and Submasters.
 - **sACN (E1.31)** and **Art-Net** output in parallel.
+- **USB-DMX** output — cheap "Open DMX"-style adapters (FTDI; tested with
+  the DSD TECH SH-RS09B), in parallel with sACN and Art-Net. Plug the
+  adapter in, menu **Settings → USB-DMX**, and DMX comes straight out of
+  the cable — no network node or expensive hardware needed.
 - **OSC** input — control it from physical consoles or OSC apps (e.g. TouchOSC).
   See the protocol in the Help menu → OSC Help or in [`DEVELOPMENT.md`](DEVELOPMENT.md).
 - **MIDI IN/OUT per cue** — sync with QLab, video or any MIDI device. Each cue
