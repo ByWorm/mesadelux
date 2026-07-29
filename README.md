@@ -16,6 +16,9 @@ Python + Tkinter).
 - Renumerador (patch) com importação **GDTF**, 8/16 bit, curvas e cores de halo.
 - **16 efeitos (FX)** — manuais (passos em cadeia), dinâmicos (paramétricos) e Caos.
 - Looks, Grupos e Submasters.
+- **Layouts** (v6.5) — vista de células estilo GrandMA, com páginas
+  (ex.: MÁQUINAS / LEDS / PAR64) e teclas de atributo (ZOOM, RED,
+  STROBE…) para chamar cada atributo dos aparelhos. Editável ao vivo.
 - Saída **sACN (E1.31)** e **Art-Net** em paralelo.
 - Saída **USB-DMX** — adaptadores baratos tipo "Open DMX" (FTDI; testado
   com o DSD TECH SH-RS09B), em paralelo com o sACN e o Art-Net. Liga o
@@ -44,7 +47,7 @@ Python + Tkinter).
   indicador de recepção). Só escuta: nada é gravado sem ordem.
 
 ### O que inclui este repositório
-- **raiz** — a app MESADELUX (`mesadelux_v6_4_2.py` / `.exe`; `dmx_usb.py`
+- **raiz** — a app MESADELUX (`mesadelux_v6_5_0.py` / `.exe`; `dmx_usb.py`
   é o módulo de saída USB-DMX)
 - [`firmware/`](firmware) — firmware MicroPython das duas consolas físicas
   (Raspberry Pi Pico W)
@@ -54,9 +57,9 @@ Python + Tkinter).
 - [`exemplos/`](exemplos) — ficheiros de show de demonstração
 
 ### Como correr
-- **Windows:** abre `mesadelux_v6_4_2.exe` (não precisa de instalar nada).
+- **Windows:** abre `mesadelux_v6_5_0.exe` (não precisa de instalar nada).
 - **Do código:** `pip install sacn python-osc` e depois
-  `python mesadelux_v6_4_2.py`.
+  `python mesadelux_v6_5_0.py`.
 - **MIDI (opcional):** `pip install mido python-rtmidi`
 - **USB-DMX (opcional):** `pip install pyserial` (com o `dmx_usb.py` ao
   lado da app)
@@ -87,6 +90,9 @@ It runs on Windows (and from source on any system with Python + Tkinter).
 - Patch with **GDTF** import, 8/16 bit, curves and halo colours.
 - **16 effects (FX)** — manual (chained steps), dynamic (parametric) and Chaos.
 - Looks, Groups and Submasters.
+- **Layouts** (v6.5) — GrandMA-style cell view, with pages (e.g.
+  MOVERS / LEDS / PAR64) and attribute keys (ZOOM, RED, STROBE…) to
+  call each fixture attribute. Editable live.
 - **sACN (E1.31)** and **Art-Net** output in parallel.
 - **USB-DMX** output — cheap "Open DMX"-style adapters (FTDI; tested with
   the DSD TECH SH-RS09B), in parallel with sACN and Art-Net. Plug the
@@ -115,7 +121,7 @@ It runs on Windows (and from source on any system with Python + Tkinter).
   Listen only: nothing is recorded without your command.
 
 ### What's in this repository
-- **root** — the MESADELUX app (`mesadelux_v6_4_2.py` / `.exe`;
+- **root** — the MESADELUX app (`mesadelux_v6_5_0.py` / `.exe`;
   `dmx_usb.py` is the USB-DMX output module)
 - [`firmware/`](firmware) — MicroPython firmware for the two physical
   consoles (Raspberry Pi Pico W)
@@ -126,9 +132,9 @@ It runs on Windows (and from source on any system with Python + Tkinter).
 - [`exemplos/`](exemplos) — demo show files
 
 ### How to run
-- **Windows:** open `mesadelux_v6_4_2.exe` (nothing to install).
+- **Windows:** open `mesadelux_v6_5_0.exe` (nothing to install).
 - **From source:** `pip install sacn python-osc`, then
-  `python mesadelux_v6_4_2.py`.
+  `python mesadelux_v6_5_0.py`.
 - **MIDI (optional):** `pip install mido python-rtmidi`
 - **USB-DMX (optional):** `pip install pyserial` (with `dmx_usb.py` next
   to the app)

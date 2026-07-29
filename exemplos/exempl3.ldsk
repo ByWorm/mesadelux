@@ -1,0 +1,3888 @@
+{
+  "num_channels": 150,
+  "intensity_mode": "cue_only",
+  "patch": {
+    "1": {
+      "universe": 1,
+      "addrs": [
+        1
+      ],
+      "bit16": true,
+      "fine": [
+        2
+      ],
+      "halo": "vermelho",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "2": {
+      "universe": 1,
+      "addrs": [
+        3
+      ],
+      "bit16": true,
+      "fine": [
+        4
+      ],
+      "halo": "laranja",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "3": {
+      "universe": 1,
+      "addrs": [
+        5
+      ],
+      "bit16": true,
+      "fine": [
+        6
+      ],
+      "halo": "amarelo",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "4": {
+      "universe": 1,
+      "addrs": [
+        7
+      ],
+      "bit16": true,
+      "fine": [
+        8
+      ],
+      "halo": "verde",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "5": {
+      "universe": 1,
+      "addrs": [
+        9
+      ],
+      "bit16": true,
+      "fine": [
+        10
+      ],
+      "halo": "ciano",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "6": {
+      "universe": 1,
+      "addrs": [
+        11
+      ],
+      "bit16": true,
+      "fine": [
+        12
+      ],
+      "halo": "azul",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "7": {
+      "universe": 1,
+      "addrs": [
+        13
+      ],
+      "bit16": true,
+      "fine": [
+        14
+      ],
+      "halo": "magenta",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "8": {
+      "universe": 1,
+      "addrs": [
+        15
+      ],
+      "bit16": true,
+      "fine": [
+        16
+      ],
+      "halo": "branco",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "9": {
+      "universe": 1,
+      "addrs": [
+        17
+      ],
+      "bit16": true,
+      "fine": [
+        18
+      ],
+      "halo": "cinzento",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "10": {
+      "universe": 1,
+      "addrs": [
+        19
+      ],
+      "bit16": true,
+      "fine": [
+        20
+      ],
+      "halo": "vermelho",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "11": {
+      "universe": 1,
+      "addrs": [
+        101
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "12": {
+      "universe": 1,
+      "addrs": [
+        102
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "13": {
+      "universe": 1,
+      "addrs": [
+        103
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "14": {
+      "universe": 1,
+      "addrs": [
+        104
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "15": {
+      "universe": 1,
+      "addrs": [
+        105
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "16": {
+      "universe": 1,
+      "addrs": [
+        106
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "17": {
+      "universe": 1,
+      "addrs": [
+        107
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "18": {
+      "universe": 1,
+      "addrs": [
+        108
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "19": {
+      "universe": 1,
+      "addrs": [
+        109
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "20": {
+      "universe": 1,
+      "addrs": [
+        110
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "21": {
+      "universe": 1,
+      "addrs": [
+        111
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "22": {
+      "universe": 1,
+      "addrs": [
+        112
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "23": {
+      "universe": 1,
+      "addrs": [
+        113
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "24": {
+      "universe": 1,
+      "addrs": [
+        114
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "25": {
+      "universe": 1,
+      "addrs": [
+        115
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "26": {
+      "universe": 1,
+      "addrs": [
+        116
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "27": {
+      "universe": 1,
+      "addrs": [
+        117
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "28": {
+      "universe": 1,
+      "addrs": [
+        118
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "29": {
+      "universe": 1,
+      "addrs": [
+        119
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "30": {
+      "universe": 1,
+      "addrs": [
+        120
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "pct",
+      "default": null,
+      "name": "PAR64",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "31": {
+      "universe": 1,
+      "addrs": [
+        201
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "branco",
+      "display": "pct",
+      "default": null,
+      "name": "SPCENT",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "32": {
+      "universe": 1,
+      "addrs": [
+        332
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "verde",
+      "display": "dec",
+      "default": 255,
+      "name": "RELÉ",
+      "alcunha": 0,
+      "curva": "rele",
+      "invert": false
+    },
+    "33": {
+      "universe": 1,
+      "addrs": [
+        400
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "magenta",
+      "display": "dec",
+      "default": null,
+      "name": "DIRECT",
+      "alcunha": 0,
+      "curva": "ligado",
+      "invert": false
+    },
+    "34": {
+      "universe": 3,
+      "addrs": [
+        1
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": null,
+      "display": "pct",
+      "default": null,
+      "name": "PUBLIC",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "35": {
+      "universe": 3,
+      "addrs": [
+        2
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": null,
+      "display": "pct",
+      "default": null,
+      "name": "PUBLIC",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "36": {
+      "universe": 3,
+      "addrs": [
+        3
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": null,
+      "display": "pct",
+      "default": null,
+      "name": "PUBLIC",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "37": {
+      "universe": 3,
+      "addrs": [
+        4
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": null,
+      "display": "pct",
+      "default": null,
+      "name": "PUBLIC",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "38": {
+      "universe": 3,
+      "addrs": [
+        5
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": null,
+      "display": "pct",
+      "default": null,
+      "name": "PUBLIC",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "39": {
+      "universe": 3,
+      "addrs": [
+        6
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": null,
+      "display": "pct",
+      "default": null,
+      "name": "PUBLIC",
+      "alcunha": 0,
+      "curva": "linear",
+      "invert": false
+    },
+    "40": {
+      "universe": 2,
+      "addrs": [
+        1
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "vermelho",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 601,
+      "curva": "linear",
+      "invert": false
+    },
+    "41": {
+      "universe": 2,
+      "addrs": [
+        2
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": 255,
+      "name": "R",
+      "alcunha": 601,
+      "curva": "linear",
+      "invert": false
+    },
+    "42": {
+      "universe": 2,
+      "addrs": [
+        3
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": 255,
+      "name": "G",
+      "alcunha": 601,
+      "curva": "linear",
+      "invert": false
+    },
+    "43": {
+      "universe": 2,
+      "addrs": [
+        4
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": 255,
+      "name": "B",
+      "alcunha": 601,
+      "curva": "linear",
+      "invert": false
+    },
+    "44": {
+      "universe": 2,
+      "addrs": [
+        5
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": null,
+      "name": "BM",
+      "alcunha": 601,
+      "curva": "linear",
+      "invert": false
+    },
+    "45": {
+      "universe": 2,
+      "addrs": [
+        6
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": null,
+      "name": "GY",
+      "alcunha": 601,
+      "curva": "linear",
+      "invert": false
+    },
+    "46": {
+      "universe": 2,
+      "addrs": [
+        7
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": null,
+      "name": "STROBE",
+      "alcunha": 601,
+      "curva": "linear",
+      "invert": false
+    },
+    "47": {
+      "universe": 2,
+      "addrs": [
+        8
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": 127,
+      "name": "ZOOM",
+      "alcunha": 601,
+      "curva": "linear",
+      "invert": false
+    },
+    "48": {
+      "universe": 2,
+      "addrs": [
+        9
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": null,
+      "name": "FANS",
+      "alcunha": 601,
+      "curva": "linear",
+      "invert": false
+    },
+    "49": {
+      "universe": 2,
+      "addrs": [
+        10
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 602,
+      "curva": "linear",
+      "invert": false
+    },
+    "50": {
+      "universe": 2,
+      "addrs": [
+        11
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "dec",
+      "default": 255,
+      "name": "R",
+      "alcunha": 602,
+      "curva": "linear",
+      "invert": false
+    },
+    "51": {
+      "universe": 2,
+      "addrs": [
+        12
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "dec",
+      "default": 255,
+      "name": "G",
+      "alcunha": 602,
+      "curva": "linear",
+      "invert": false
+    },
+    "52": {
+      "universe": 2,
+      "addrs": [
+        13
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "dec",
+      "default": 255,
+      "name": "B",
+      "alcunha": 602,
+      "curva": "linear",
+      "invert": false
+    },
+    "53": {
+      "universe": 2,
+      "addrs": [
+        14
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "dec",
+      "default": null,
+      "name": "BM",
+      "alcunha": 602,
+      "curva": "linear",
+      "invert": false
+    },
+    "54": {
+      "universe": 2,
+      "addrs": [
+        15
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "dec",
+      "default": null,
+      "name": "GY",
+      "alcunha": 602,
+      "curva": "linear",
+      "invert": false
+    },
+    "55": {
+      "universe": 2,
+      "addrs": [
+        16
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "dec",
+      "default": null,
+      "name": "STROBE",
+      "alcunha": 602,
+      "curva": "linear",
+      "invert": false
+    },
+    "56": {
+      "universe": 2,
+      "addrs": [
+        17
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "dec",
+      "default": 127,
+      "name": "ZOOM",
+      "alcunha": 602,
+      "curva": "linear",
+      "invert": false
+    },
+    "57": {
+      "universe": 2,
+      "addrs": [
+        18
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "dec",
+      "default": null,
+      "name": "FANS",
+      "alcunha": 602,
+      "curva": "linear",
+      "invert": false
+    },
+    "58": {
+      "universe": 2,
+      "addrs": [
+        19
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "amarelo",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 603,
+      "curva": "linear",
+      "invert": false
+    },
+    "59": {
+      "universe": 2,
+      "addrs": [
+        20
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "amarelo",
+      "display": "dec",
+      "default": 255,
+      "name": "R",
+      "alcunha": 603,
+      "curva": "linear",
+      "invert": false
+    },
+    "60": {
+      "universe": 2,
+      "addrs": [
+        21
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "amarelo",
+      "display": "dec",
+      "default": 255,
+      "name": "G",
+      "alcunha": 603,
+      "curva": "linear",
+      "invert": false
+    },
+    "61": {
+      "universe": 2,
+      "addrs": [
+        22
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "amarelo",
+      "display": "dec",
+      "default": 255,
+      "name": "B",
+      "alcunha": 603,
+      "curva": "linear",
+      "invert": false
+    },
+    "62": {
+      "universe": 2,
+      "addrs": [
+        23
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "amarelo",
+      "display": "dec",
+      "default": null,
+      "name": "BM",
+      "alcunha": 603,
+      "curva": "linear",
+      "invert": false
+    },
+    "63": {
+      "universe": 2,
+      "addrs": [
+        24
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "amarelo",
+      "display": "dec",
+      "default": null,
+      "name": "GY",
+      "alcunha": 603,
+      "curva": "linear",
+      "invert": false
+    },
+    "64": {
+      "universe": 2,
+      "addrs": [
+        25
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "amarelo",
+      "display": "dec",
+      "default": null,
+      "name": "STROBE",
+      "alcunha": 603,
+      "curva": "linear",
+      "invert": false
+    },
+    "65": {
+      "universe": 2,
+      "addrs": [
+        26
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "amarelo",
+      "display": "dec",
+      "default": 127,
+      "name": "ZOOM",
+      "alcunha": 603,
+      "curva": "linear",
+      "invert": false
+    },
+    "66": {
+      "universe": 2,
+      "addrs": [
+        27
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "amarelo",
+      "display": "dec",
+      "default": null,
+      "name": "FANS",
+      "alcunha": 603,
+      "curva": "linear",
+      "invert": false
+    },
+    "67": {
+      "universe": 2,
+      "addrs": [
+        28
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "verde",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 604,
+      "curva": "linear",
+      "invert": false
+    },
+    "68": {
+      "universe": 2,
+      "addrs": [
+        29
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "verde",
+      "display": "dec",
+      "default": 255,
+      "name": "R",
+      "alcunha": 604,
+      "curva": "linear",
+      "invert": false
+    },
+    "69": {
+      "universe": 2,
+      "addrs": [
+        30
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "verde",
+      "display": "dec",
+      "default": 255,
+      "name": "G",
+      "alcunha": 604,
+      "curva": "linear",
+      "invert": false
+    },
+    "70": {
+      "universe": 2,
+      "addrs": [
+        31
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "verde",
+      "display": "dec",
+      "default": 255,
+      "name": "B",
+      "alcunha": 604,
+      "curva": "linear",
+      "invert": false
+    },
+    "71": {
+      "universe": 2,
+      "addrs": [
+        32
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "verde",
+      "display": "dec",
+      "default": null,
+      "name": "BM",
+      "alcunha": 604,
+      "curva": "linear",
+      "invert": false
+    },
+    "72": {
+      "universe": 2,
+      "addrs": [
+        33
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "verde",
+      "display": "dec",
+      "default": null,
+      "name": "GY",
+      "alcunha": 604,
+      "curva": "linear",
+      "invert": false
+    },
+    "73": {
+      "universe": 2,
+      "addrs": [
+        34
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "verde",
+      "display": "dec",
+      "default": null,
+      "name": "STROBE",
+      "alcunha": 604,
+      "curva": "linear",
+      "invert": false
+    },
+    "74": {
+      "universe": 2,
+      "addrs": [
+        35
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "verde",
+      "display": "dec",
+      "default": 127,
+      "name": "ZOOM",
+      "alcunha": 604,
+      "curva": "linear",
+      "invert": false
+    },
+    "75": {
+      "universe": 2,
+      "addrs": [
+        36
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "verde",
+      "display": "dec",
+      "default": null,
+      "name": "FANS",
+      "alcunha": 604,
+      "curva": "linear",
+      "invert": false
+    },
+    "76": {
+      "universe": 2,
+      "addrs": [
+        37
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "ciano",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 605,
+      "curva": "linear",
+      "invert": false
+    },
+    "77": {
+      "universe": 2,
+      "addrs": [
+        38
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "ciano",
+      "display": "dec",
+      "default": 255,
+      "name": "R",
+      "alcunha": 605,
+      "curva": "linear",
+      "invert": false
+    },
+    "78": {
+      "universe": 2,
+      "addrs": [
+        39
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "ciano",
+      "display": "dec",
+      "default": 255,
+      "name": "G",
+      "alcunha": 605,
+      "curva": "linear",
+      "invert": false
+    },
+    "79": {
+      "universe": 2,
+      "addrs": [
+        40
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "ciano",
+      "display": "dec",
+      "default": 255,
+      "name": "B",
+      "alcunha": 605,
+      "curva": "linear",
+      "invert": false
+    },
+    "80": {
+      "universe": 2,
+      "addrs": [
+        41
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "ciano",
+      "display": "dec",
+      "default": null,
+      "name": "BM",
+      "alcunha": 605,
+      "curva": "linear",
+      "invert": false
+    },
+    "81": {
+      "universe": 2,
+      "addrs": [
+        42
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "ciano",
+      "display": "dec",
+      "default": null,
+      "name": "GY",
+      "alcunha": 605,
+      "curva": "linear",
+      "invert": false
+    },
+    "82": {
+      "universe": 2,
+      "addrs": [
+        43
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "ciano",
+      "display": "dec",
+      "default": null,
+      "name": "STROBE",
+      "alcunha": 605,
+      "curva": "linear",
+      "invert": false
+    },
+    "83": {
+      "universe": 2,
+      "addrs": [
+        44
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "ciano",
+      "display": "dec",
+      "default": 127,
+      "name": "ZOOM",
+      "alcunha": 605,
+      "curva": "linear",
+      "invert": false
+    },
+    "84": {
+      "universe": 2,
+      "addrs": [
+        45
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "ciano",
+      "display": "dec",
+      "default": null,
+      "name": "FANS",
+      "alcunha": 605,
+      "curva": "linear",
+      "invert": false
+    },
+    "85": {
+      "universe": 2,
+      "addrs": [
+        46
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 606,
+      "curva": "linear",
+      "invert": false
+    },
+    "86": {
+      "universe": 2,
+      "addrs": [
+        47
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "dec",
+      "default": 255,
+      "name": "R",
+      "alcunha": 606,
+      "curva": "linear",
+      "invert": false
+    },
+    "87": {
+      "universe": 2,
+      "addrs": [
+        48
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "dec",
+      "default": 255,
+      "name": "G",
+      "alcunha": 606,
+      "curva": "linear",
+      "invert": false
+    },
+    "88": {
+      "universe": 2,
+      "addrs": [
+        49
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "dec",
+      "default": 255,
+      "name": "B",
+      "alcunha": 606,
+      "curva": "linear",
+      "invert": false
+    },
+    "89": {
+      "universe": 2,
+      "addrs": [
+        50
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "dec",
+      "default": null,
+      "name": "BM",
+      "alcunha": 606,
+      "curva": "linear",
+      "invert": false
+    },
+    "90": {
+      "universe": 2,
+      "addrs": [
+        51
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "dec",
+      "default": null,
+      "name": "GY",
+      "alcunha": 606,
+      "curva": "linear",
+      "invert": false
+    },
+    "91": {
+      "universe": 2,
+      "addrs": [
+        52
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "dec",
+      "default": null,
+      "name": "STROBE",
+      "alcunha": 606,
+      "curva": "linear",
+      "invert": false
+    },
+    "92": {
+      "universe": 2,
+      "addrs": [
+        53
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "dec",
+      "default": 127,
+      "name": "ZOOM",
+      "alcunha": 606,
+      "curva": "linear",
+      "invert": false
+    },
+    "93": {
+      "universe": 2,
+      "addrs": [
+        54
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "dec",
+      "default": null,
+      "name": "FANS",
+      "alcunha": 606,
+      "curva": "linear",
+      "invert": false
+    },
+    "94": {
+      "universe": 2,
+      "addrs": [
+        55
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "magenta",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 607,
+      "curva": "linear",
+      "invert": false
+    },
+    "95": {
+      "universe": 2,
+      "addrs": [
+        56
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "magenta",
+      "display": "dec",
+      "default": 255,
+      "name": "R",
+      "alcunha": 607,
+      "curva": "linear",
+      "invert": false
+    },
+    "96": {
+      "universe": 2,
+      "addrs": [
+        57
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "magenta",
+      "display": "dec",
+      "default": 255,
+      "name": "G",
+      "alcunha": 607,
+      "curva": "linear",
+      "invert": false
+    },
+    "97": {
+      "universe": 2,
+      "addrs": [
+        58
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "magenta",
+      "display": "dec",
+      "default": 255,
+      "name": "B",
+      "alcunha": 607,
+      "curva": "linear",
+      "invert": false
+    },
+    "98": {
+      "universe": 2,
+      "addrs": [
+        59
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "magenta",
+      "display": "dec",
+      "default": null,
+      "name": "BM",
+      "alcunha": 607,
+      "curva": "linear",
+      "invert": false
+    },
+    "99": {
+      "universe": 2,
+      "addrs": [
+        60
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "magenta",
+      "display": "dec",
+      "default": null,
+      "name": "GY",
+      "alcunha": 607,
+      "curva": "linear",
+      "invert": false
+    },
+    "100": {
+      "universe": 2,
+      "addrs": [
+        61
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "magenta",
+      "display": "dec",
+      "default": null,
+      "name": "STROBE",
+      "alcunha": 607,
+      "curva": "linear",
+      "invert": false
+    },
+    "101": {
+      "universe": 2,
+      "addrs": [
+        62
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "magenta",
+      "display": "dec",
+      "default": 127,
+      "name": "ZOOM",
+      "alcunha": 607,
+      "curva": "linear",
+      "invert": false
+    },
+    "102": {
+      "universe": 2,
+      "addrs": [
+        63
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "magenta",
+      "display": "dec",
+      "default": null,
+      "name": "FANS",
+      "alcunha": 607,
+      "curva": "linear",
+      "invert": false
+    },
+    "103": {
+      "universe": 2,
+      "addrs": [
+        64
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "branco",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 608,
+      "curva": "linear",
+      "invert": false
+    },
+    "104": {
+      "universe": 2,
+      "addrs": [
+        65
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "branco",
+      "display": "dec",
+      "default": 255,
+      "name": "R",
+      "alcunha": 608,
+      "curva": "linear",
+      "invert": false
+    },
+    "105": {
+      "universe": 2,
+      "addrs": [
+        66
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "branco",
+      "display": "dec",
+      "default": 255,
+      "name": "G",
+      "alcunha": 608,
+      "curva": "linear",
+      "invert": false
+    },
+    "106": {
+      "universe": 2,
+      "addrs": [
+        67
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "branco",
+      "display": "dec",
+      "default": 255,
+      "name": "B",
+      "alcunha": 608,
+      "curva": "linear",
+      "invert": false
+    },
+    "107": {
+      "universe": 2,
+      "addrs": [
+        68
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "branco",
+      "display": "dec",
+      "default": null,
+      "name": "BM",
+      "alcunha": 608,
+      "curva": "linear",
+      "invert": false
+    },
+    "108": {
+      "universe": 2,
+      "addrs": [
+        69
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "branco",
+      "display": "dec",
+      "default": null,
+      "name": "GY",
+      "alcunha": 608,
+      "curva": "linear",
+      "invert": false
+    },
+    "109": {
+      "universe": 2,
+      "addrs": [
+        70
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "branco",
+      "display": "dec",
+      "default": null,
+      "name": "STROBE",
+      "alcunha": 608,
+      "curva": "linear",
+      "invert": false
+    },
+    "110": {
+      "universe": 2,
+      "addrs": [
+        71
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "branco",
+      "display": "dec",
+      "default": 127,
+      "name": "ZOOM",
+      "alcunha": 608,
+      "curva": "linear",
+      "invert": false
+    },
+    "111": {
+      "universe": 2,
+      "addrs": [
+        72
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "branco",
+      "display": "dec",
+      "default": null,
+      "name": "FANS",
+      "alcunha": 608,
+      "curva": "linear",
+      "invert": false
+    },
+    "112": {
+      "universe": 2,
+      "addrs": [
+        73
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "cinzento",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 609,
+      "curva": "linear",
+      "invert": false
+    },
+    "113": {
+      "universe": 2,
+      "addrs": [
+        74
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "cinzento",
+      "display": "dec",
+      "default": 255,
+      "name": "R",
+      "alcunha": 609,
+      "curva": "linear",
+      "invert": false
+    },
+    "114": {
+      "universe": 2,
+      "addrs": [
+        75
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "cinzento",
+      "display": "dec",
+      "default": 255,
+      "name": "G",
+      "alcunha": 609,
+      "curva": "linear",
+      "invert": false
+    },
+    "115": {
+      "universe": 2,
+      "addrs": [
+        76
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "cinzento",
+      "display": "dec",
+      "default": 255,
+      "name": "B",
+      "alcunha": 609,
+      "curva": "linear",
+      "invert": false
+    },
+    "116": {
+      "universe": 2,
+      "addrs": [
+        77
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "cinzento",
+      "display": "dec",
+      "default": null,
+      "name": "BM",
+      "alcunha": 609,
+      "curva": "linear",
+      "invert": false
+    },
+    "117": {
+      "universe": 2,
+      "addrs": [
+        78
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "cinzento",
+      "display": "dec",
+      "default": null,
+      "name": "GY",
+      "alcunha": 609,
+      "curva": "linear",
+      "invert": false
+    },
+    "118": {
+      "universe": 2,
+      "addrs": [
+        79
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "cinzento",
+      "display": "dec",
+      "default": null,
+      "name": "STROBE",
+      "alcunha": 609,
+      "curva": "linear",
+      "invert": false
+    },
+    "119": {
+      "universe": 2,
+      "addrs": [
+        80
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "cinzento",
+      "display": "dec",
+      "default": 127,
+      "name": "ZOOM",
+      "alcunha": 609,
+      "curva": "linear",
+      "invert": false
+    },
+    "120": {
+      "universe": 2,
+      "addrs": [
+        81
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "cinzento",
+      "display": "dec",
+      "default": null,
+      "name": "FANS",
+      "alcunha": 609,
+      "curva": "linear",
+      "invert": false
+    },
+    "121": {
+      "universe": 4,
+      "addrs": [
+        1
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "vermelho",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1001,
+      "curva": "linear",
+      "invert": false
+    },
+    "122": {
+      "universe": 4,
+      "addrs": [
+        2
+      ],
+      "bit16": true,
+      "fine": [
+        3
+      ],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1001,
+      "curva": "linear",
+      "invert": false
+    },
+    "123": {
+      "universe": 4,
+      "addrs": [
+        4
+      ],
+      "bit16": true,
+      "fine": [
+        5
+      ],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1001,
+      "curva": "linear",
+      "invert": false
+    },
+    "124": {
+      "universe": 4,
+      "addrs": [
+        6
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "laranja",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1002,
+      "curva": "linear",
+      "invert": false
+    },
+    "125": {
+      "universe": 4,
+      "addrs": [
+        7
+      ],
+      "bit16": true,
+      "fine": [
+        8
+      ],
+      "halo": "laranja",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1002,
+      "curva": "linear",
+      "invert": false
+    },
+    "126": {
+      "universe": 4,
+      "addrs": [
+        9
+      ],
+      "bit16": true,
+      "fine": [
+        10
+      ],
+      "halo": "laranja",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1002,
+      "curva": "linear",
+      "invert": false
+    },
+    "127": {
+      "universe": 4,
+      "addrs": [
+        11
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "amarelo",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1003,
+      "curva": "linear",
+      "invert": false
+    },
+    "128": {
+      "universe": 4,
+      "addrs": [
+        12
+      ],
+      "bit16": true,
+      "fine": [
+        13
+      ],
+      "halo": "amarelo",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1003,
+      "curva": "linear",
+      "invert": false
+    },
+    "129": {
+      "universe": 4,
+      "addrs": [
+        14
+      ],
+      "bit16": true,
+      "fine": [
+        15
+      ],
+      "halo": "amarelo",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1003,
+      "curva": "linear",
+      "invert": false
+    },
+    "130": {
+      "universe": 4,
+      "addrs": [
+        16
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "verde",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1004,
+      "curva": "linear",
+      "invert": false
+    },
+    "131": {
+      "universe": 4,
+      "addrs": [
+        17
+      ],
+      "bit16": true,
+      "fine": [
+        18
+      ],
+      "halo": "verde",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1004,
+      "curva": "linear",
+      "invert": false
+    },
+    "132": {
+      "universe": 4,
+      "addrs": [
+        19
+      ],
+      "bit16": true,
+      "fine": [
+        20
+      ],
+      "halo": "verde",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1004,
+      "curva": "linear",
+      "invert": false
+    },
+    "133": {
+      "universe": 4,
+      "addrs": [
+        21
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "ciano",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1005,
+      "curva": "linear",
+      "invert": false
+    },
+    "134": {
+      "universe": 4,
+      "addrs": [
+        22
+      ],
+      "bit16": true,
+      "fine": [
+        23
+      ],
+      "halo": "ciano",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1005,
+      "curva": "linear",
+      "invert": false
+    },
+    "135": {
+      "universe": 4,
+      "addrs": [
+        24
+      ],
+      "bit16": true,
+      "fine": [
+        25
+      ],
+      "halo": "ciano",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1005,
+      "curva": "linear",
+      "invert": false
+    },
+    "136": {
+      "universe": 4,
+      "addrs": [
+        26
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "azul",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1006,
+      "curva": "linear",
+      "invert": false
+    },
+    "137": {
+      "universe": 4,
+      "addrs": [
+        27
+      ],
+      "bit16": true,
+      "fine": [
+        28
+      ],
+      "halo": "azul",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1006,
+      "curva": "linear",
+      "invert": false
+    },
+    "138": {
+      "universe": 4,
+      "addrs": [
+        29
+      ],
+      "bit16": true,
+      "fine": [
+        30
+      ],
+      "halo": "azul",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1006,
+      "curva": "linear",
+      "invert": false
+    },
+    "139": {
+      "universe": 4,
+      "addrs": [
+        31
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "magenta",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1007,
+      "curva": "linear",
+      "invert": false
+    },
+    "140": {
+      "universe": 4,
+      "addrs": [
+        32
+      ],
+      "bit16": true,
+      "fine": [
+        33
+      ],
+      "halo": "magenta",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1007,
+      "curva": "linear",
+      "invert": false
+    },
+    "141": {
+      "universe": 4,
+      "addrs": [
+        34
+      ],
+      "bit16": true,
+      "fine": [
+        35
+      ],
+      "halo": "magenta",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1007,
+      "curva": "linear",
+      "invert": false
+    },
+    "142": {
+      "universe": 4,
+      "addrs": [
+        36
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "branco",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1008,
+      "curva": "linear",
+      "invert": false
+    },
+    "143": {
+      "universe": 4,
+      "addrs": [
+        37
+      ],
+      "bit16": true,
+      "fine": [
+        38
+      ],
+      "halo": "branco",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1008,
+      "curva": "linear",
+      "invert": false
+    },
+    "144": {
+      "universe": 4,
+      "addrs": [
+        39
+      ],
+      "bit16": true,
+      "fine": [
+        40
+      ],
+      "halo": "branco",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1008,
+      "curva": "linear",
+      "invert": false
+    },
+    "145": {
+      "universe": 4,
+      "addrs": [
+        41
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "cinzento",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1009,
+      "curva": "linear",
+      "invert": false
+    },
+    "146": {
+      "universe": 4,
+      "addrs": [
+        42
+      ],
+      "bit16": true,
+      "fine": [
+        43
+      ],
+      "halo": "cinzento",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1009,
+      "curva": "linear",
+      "invert": false
+    },
+    "147": {
+      "universe": 4,
+      "addrs": [
+        44
+      ],
+      "bit16": true,
+      "fine": [
+        45
+      ],
+      "halo": "cinzento",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1009,
+      "curva": "linear",
+      "invert": false
+    },
+    "148": {
+      "universe": 4,
+      "addrs": [
+        46
+      ],
+      "bit16": false,
+      "fine": [],
+      "halo": "vermelho",
+      "display": "pct",
+      "default": null,
+      "name": "DIM",
+      "alcunha": 1010,
+      "curva": "linear",
+      "invert": false
+    },
+    "149": {
+      "universe": 4,
+      "addrs": [
+        47
+      ],
+      "bit16": true,
+      "fine": [
+        48
+      ],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": 127,
+      "name": "PAN",
+      "alcunha": 1010,
+      "curva": "linear",
+      "invert": false
+    },
+    "150": {
+      "universe": 4,
+      "addrs": [
+        49
+      ],
+      "bit16": true,
+      "fine": [
+        50
+      ],
+      "halo": "vermelho",
+      "display": "dec",
+      "default": 127,
+      "name": "TILT",
+      "alcunha": 1010,
+      "curva": "linear",
+      "invert": false
+    }
+  },
+  "cues": [
+    {
+      "num": "ZERO",
+      "label": "",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {},
+      "zero": true,
+      "enabled": true,
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 1.0,
+      "label": "START",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {
+        "31": 255
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 2.0,
+      "label": "PAR64 BACKLIGHT",
+      "fade_in": 10.0,
+      "fade_out": 3.0,
+      "delay_in": 3.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {
+        "11": 178,
+        "12": 178,
+        "13": 178,
+        "14": 178,
+        "15": 178,
+        "16": 178,
+        "17": 178,
+        "18": 178,
+        "19": 178,
+        "20": 178,
+        "21": 178,
+        "22": 178,
+        "23": 178,
+        "24": 178,
+        "25": 178,
+        "26": 178,
+        "27": 178,
+        "28": 178,
+        "29": 178,
+        "30": 178,
+        "41": 0,
+        "50": 0,
+        "59": 0,
+        "68": 0,
+        "77": 0,
+        "86": 0,
+        "95": 0,
+        "104": 0,
+        "113": 0
+      },
+      "midi_nota": 1,
+      "midi_direccao": "in",
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 3.0,
+      "label": "FRESNEL LED CIANO",
+      "fade_in": 10.0,
+      "fade_out": 15.0,
+      "delay_in": 0.0,
+      "delay_out": 2.0,
+      "follow": null,
+      "levels": {
+        "40": 255,
+        "41": 0,
+        "42": 255,
+        "43": 255,
+        "49": 255,
+        "50": 0,
+        "51": 255,
+        "52": 255,
+        "58": 255,
+        "59": 0,
+        "60": 255,
+        "61": 255,
+        "67": 255,
+        "68": 0,
+        "69": 255,
+        "70": 255,
+        "76": 255,
+        "77": 0,
+        "78": 255,
+        "79": 255,
+        "85": 255,
+        "86": 0,
+        "87": 255,
+        "88": 255,
+        "94": 255,
+        "95": 0,
+        "96": 255,
+        "97": 255,
+        "103": 255,
+        "104": 0,
+        "105": 255,
+        "106": 255,
+        "112": 255,
+        "113": 0,
+        "114": 255,
+        "115": 255
+      },
+      "midi_nota": 6,
+      "midi_direccao": "out",
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 4.0,
+      "label": "AUTO",
+      "fade_in": 20.0,
+      "fade_out": 20.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": 0.0,
+      "levels": {
+        "40": 127,
+        "47": 0,
+        "49": 127,
+        "56": 0,
+        "58": 127,
+        "65": 0,
+        "67": 127,
+        "74": 0,
+        "76": 127,
+        "83": 0,
+        "85": 127,
+        "92": 0,
+        "94": 127,
+        "101": 0,
+        "103": 127,
+        "110": 0,
+        "112": 127,
+        "119": 0
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 5.0,
+      "label": "PART",
+      "fade_in": 7.0,
+      "fade_out": 12.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {
+        "40": 255,
+        "41": 255,
+        "42": 0,
+        "43": 0,
+        "49": 255,
+        "50": 255,
+        "51": 0,
+        "52": 0,
+        "58": 255,
+        "59": 255,
+        "60": 0,
+        "61": 0
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0,
+      "parts": {
+        "2": {
+          "channels": [
+            42,
+            51,
+            60
+          ],
+          "fade_in": 2.0,
+          "fade_out": 2.0,
+          "delay_in": 0.0,
+          "delay_out": 0.0,
+          "label": ""
+        }
+      }
+    },
+    {
+      "num": 6.0,
+      "label": "CHASE FADE",
+      "fade_in": 10.0,
+      "fade_out": 10.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {
+        "42": 0,
+        "51": 0,
+        "60": 0,
+        "41": 0,
+        "43": 255,
+        "50": 0,
+        "52": 255,
+        "59": 0,
+        "61": 255,
+        "68": 0,
+        "69": 0,
+        "70": 255,
+        "77": 0,
+        "78": 0,
+        "79": 255,
+        "86": 0,
+        "87": 0,
+        "88": 255,
+        "95": 0,
+        "96": 0,
+        "97": 255,
+        "104": 0,
+        "105": 0,
+        "106": 255,
+        "113": 0,
+        "114": 0,
+        "115": 255
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0,
+      "fx_link": {
+        "num": 1,
+        "fade": true
+      }
+    },
+    {
+      "num": 7.0,
+      "label": "CHASE CUT OUT",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {
+        "40": 255,
+        "49": 255,
+        "58": 255,
+        "67": 255,
+        "76": 255,
+        "85": 255,
+        "94": 255,
+        "103": 255,
+        "112": 255,
+        "41": 0,
+        "42": 0,
+        "43": 255,
+        "50": 0,
+        "51": 0,
+        "52": 255,
+        "59": 0,
+        "60": 0,
+        "61": 255,
+        "68": 0,
+        "69": 0,
+        "70": 255,
+        "77": 0,
+        "78": 0,
+        "79": 255,
+        "86": 0,
+        "87": 0,
+        "88": 255,
+        "95": 0,
+        "96": 0,
+        "97": 255,
+        "104": 0,
+        "105": 0,
+        "106": 255,
+        "113": 0,
+        "114": 0,
+        "115": 255
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0,
+      "fx_link": {
+        "num": 1,
+        "fade": false
+      }
+    },
+    {
+      "num": 8.0,
+      "label": "CAOS",
+      "fade_in": 0.0,
+      "fade_out": 0.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {},
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0,
+      "fx_link": {
+        "num": 2,
+        "fade": false
+      }
+    },
+    {
+      "num": 9.0,
+      "label": "CAOS FADE",
+      "fade_in": 10.0,
+      "fade_out": 10.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {},
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0,
+      "fx_link": {
+        "num": 2,
+        "fade": true
+      }
+    },
+    {
+      "num": 10.0,
+      "label": "FX PART",
+      "fade_in": 10.0,
+      "fade_out": 10.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {
+        "1": 255,
+        "2": 255,
+        "3": 255,
+        "4": 255,
+        "5": 255,
+        "6": 255,
+        "7": 255,
+        "8": 255,
+        "9": 255,
+        "10": 255
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0,
+      "parts": {
+        "2": {
+          "channels": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "fade_in": 20.0,
+          "fade_out": 20.0,
+          "delay_in": 0.0,
+          "delay_out": 0.0,
+          "label": "",
+          "fx": {
+            "num": 3,
+            "fade": true
+          }
+        }
+      }
+    },
+    {
+      "num": 11.0,
+      "label": "BO",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0,
+      "fx_link": {
+        "num": 3,
+        "fade": false
+      }
+    },
+    {
+      "num": 12.0,
+      "label": "BLUE",
+      "fade_in": 5.0,
+      "fade_out": 5.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": 0.0,
+      "levels": {
+        "40": 255,
+        "49": 255,
+        "58": 255,
+        "67": 255,
+        "76": 255,
+        "85": 255,
+        "94": 255,
+        "103": 255,
+        "112": 255
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 13.0,
+      "label": "GREEN",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": 0.0,
+      "levels": {
+        "40": 255,
+        "41": 0,
+        "42": 255,
+        "43": 0,
+        "49": 255,
+        "50": 0,
+        "51": 255,
+        "52": 0,
+        "58": 255,
+        "59": 0,
+        "60": 255,
+        "61": 0,
+        "67": 255,
+        "68": 0,
+        "69": 255,
+        "70": 0,
+        "76": 255,
+        "77": 0,
+        "78": 255,
+        "79": 0,
+        "85": 255,
+        "86": 0,
+        "87": 255,
+        "88": 0,
+        "94": 255,
+        "95": 0,
+        "96": 255,
+        "97": 0,
+        "103": 255,
+        "104": 0,
+        "105": 255,
+        "106": 0,
+        "112": 255,
+        "113": 0,
+        "114": 255,
+        "115": 0
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 14.0,
+      "label": "RED",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": 0.0,
+      "levels": {
+        "40": 255,
+        "41": 255,
+        "42": 0,
+        "43": 0,
+        "49": 255,
+        "50": 255,
+        "51": 0,
+        "52": 0,
+        "58": 255,
+        "59": 255,
+        "60": 0,
+        "61": 0,
+        "67": 255,
+        "68": 255,
+        "69": 0,
+        "70": 0,
+        "76": 255,
+        "77": 255,
+        "78": 0,
+        "79": 0,
+        "85": 255,
+        "86": 255,
+        "87": 0,
+        "88": 0,
+        "94": 255,
+        "95": 255,
+        "96": 0,
+        "97": 0,
+        "103": 255,
+        "104": 255,
+        "105": 0,
+        "106": 0,
+        "112": 255,
+        "113": 255,
+        "114": 0,
+        "115": 0
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 15.0,
+      "label": "BLUE",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": 0.0,
+      "levels": {
+        "40": 255,
+        "41": 0,
+        "42": 0,
+        "43": 255,
+        "49": 255,
+        "50": 0,
+        "51": 0,
+        "52": 255,
+        "58": 255,
+        "59": 0,
+        "60": 0,
+        "61": 255,
+        "67": 255,
+        "68": 0,
+        "69": 0,
+        "70": 255,
+        "76": 255,
+        "77": 0,
+        "78": 0,
+        "79": 255,
+        "85": 255,
+        "86": 0,
+        "87": 0,
+        "88": 255,
+        "94": 255,
+        "95": 0,
+        "96": 0,
+        "97": 255,
+        "103": 255,
+        "104": 0,
+        "105": 0,
+        "106": 255,
+        "112": 255,
+        "113": 0,
+        "114": 0,
+        "115": 255
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0,
+      "salta_target": 13.0,
+      "salta_count": 0
+    },
+    {
+      "num": 16.0,
+      "label": "BO",
+      "fade_in": 15.0,
+      "fade_out": 15.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {
+        "41": 0,
+        "42": 0,
+        "43": 0,
+        "50": 0,
+        "51": 0,
+        "52": 0,
+        "59": 0,
+        "60": 0,
+        "61": 0,
+        "68": 0,
+        "69": 0,
+        "70": 0,
+        "77": 0,
+        "78": 0,
+        "79": 0,
+        "86": 0,
+        "87": 0,
+        "88": 0,
+        "95": 0,
+        "96": 0,
+        "97": 0,
+        "104": 0,
+        "105": 0,
+        "106": 0,
+        "113": 0,
+        "114": 0,
+        "115": 0
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 17.0,
+      "label": "",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {
+        "121": 255,
+        "122": 167,
+        "123": 94,
+        "124": 255,
+        "125": 167,
+        "126": 94,
+        "127": 255,
+        "128": 167,
+        "129": 94,
+        "130": 255,
+        "131": 167,
+        "132": 94,
+        "133": 255,
+        "134": 167,
+        "135": 94
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 18.0,
+      "label": "",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {
+        "121": 255,
+        "124": 255,
+        "127": 255,
+        "130": 255,
+        "133": 255,
+        "136": 255,
+        "137": 134,
+        "138": 154,
+        "139": 255,
+        "140": 134,
+        "141": 154,
+        "142": 255,
+        "143": 134,
+        "144": 154,
+        "145": 255,
+        "146": 134,
+        "147": 154,
+        "148": 255,
+        "149": 134,
+        "150": 154
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 19.0,
+      "label": "",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {
+        "121": 89,
+        "123": 75,
+        "124": 89,
+        "126": 75,
+        "127": 89,
+        "129": 75,
+        "130": 89,
+        "132": 75,
+        "133": 89,
+        "135": 75,
+        "136": 89,
+        "138": 75,
+        "139": 89,
+        "141": 75,
+        "142": 89,
+        "144": 75,
+        "145": 89,
+        "147": 75,
+        "148": 89,
+        "150": 75
+      },
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
+    },
+    {
+      "num": 20.0,
+      "label": "",
+      "fade_in": 3.0,
+      "fade_out": 3.0,
+      "delay_in": 0.0,
+      "delay_out": 0.0,
+      "follow": null,
+      "levels": {},
+      "midi_nota": null,
+      "midi_direccao": null,
+      "midi_delay_s": 0.0
+    }
+  ],
+  "presets": [
+    "35",
+    "50"
+  ],
+  "retratos": [
+    {
+      "title": "RED",
+      "halo": "vermelho",
+      "levels": {
+        "41": 255,
+        "42": 0,
+        "43": 0,
+        "50": 255,
+        "51": 0,
+        "52": 0,
+        "59": 255,
+        "60": 0,
+        "61": 0,
+        "68": 255,
+        "69": 0,
+        "70": 0,
+        "77": 255,
+        "78": 0,
+        "79": 0,
+        "86": 255,
+        "87": 0,
+        "88": 0,
+        "95": 255,
+        "96": 0,
+        "97": 0,
+        "104": 255,
+        "105": 0,
+        "106": 0,
+        "113": 255,
+        "114": 0,
+        "115": 0
+      }
+    },
+    {
+      "title": "GREEN",
+      "halo": "verde",
+      "levels": {
+        "41": 0,
+        "42": 255,
+        "43": 0,
+        "50": 0,
+        "51": 255,
+        "52": 0,
+        "59": 0,
+        "60": 255,
+        "61": 0,
+        "68": 0,
+        "69": 255,
+        "70": 0,
+        "77": 0,
+        "78": 255,
+        "79": 0,
+        "86": 0,
+        "87": 255,
+        "88": 0,
+        "95": 0,
+        "96": 255,
+        "97": 0,
+        "104": 0,
+        "105": 255,
+        "106": 0,
+        "113": 0,
+        "114": 255,
+        "115": 0
+      }
+    },
+    {
+      "title": "BLUE",
+      "halo": "azul",
+      "levels": {
+        "41": 0,
+        "42": 0,
+        "43": 255,
+        "50": 0,
+        "51": 0,
+        "52": 255,
+        "59": 0,
+        "60": 0,
+        "61": 255,
+        "68": 0,
+        "69": 0,
+        "70": 255,
+        "77": 0,
+        "78": 0,
+        "79": 255,
+        "86": 0,
+        "87": 0,
+        "88": 255,
+        "95": 0,
+        "96": 0,
+        "97": 255,
+        "104": 0,
+        "105": 0,
+        "106": 255,
+        "113": 0,
+        "114": 0,
+        "115": 255
+      }
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+      "title": "ZOOM WIDE",
+      "halo": "branco",
+      "levels": {
+        "47": 255,
+        "56": 255,
+        "65": 255,
+        "74": 255,
+        "83": 255,
+        "92": 255,
+        "101": 255,
+        "110": 255,
+        "119": 255
+      }
+    },
+    {
+      "title": "ZOOM 50%",
+      "halo": "branco",
+      "levels": {
+        "47": 127,
+        "56": 127,
+        "65": 127,
+        "74": 127,
+        "83": 127,
+        "92": 127,
+        "101": 127,
+        "110": 127,
+        "119": 127
+      }
+    },
+    {
+      "title": "ZOOM NARROW",
+      "halo": "branco",
+      "levels": {
+        "47": 0,
+        "56": 0,
+        "65": 0,
+        "74": 0,
+        "83": 0,
+        "92": 0,
+        "101": 0,
+        "110": 0,
+        "119": 0
+      }
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "groups": [
+    {
+      "name": "FR L1",
+      "halo": "cinzento",
+      "channels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "FR L2",
+      "halo": "cinzento",
+      "channels": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "name": "PAR64 L1",
+      "halo": "branco",
+      "channels": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "name": "PAR64 L2",
+      "halo": "branco",
+      "channels": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "name": "ETC CS FRESNEL V",
+      "halo": "verde",
+      "channels": [
+        40,
+        49,
+        58,
+        67,
+        76,
+        85,
+        94,
+        103,
+        112
+      ]
+    },
+    {
+      "name": "ETC CS F V L1",
+      "halo": "verde",
+      "channels": [
+        40,
+        49,
+        58
+      ]
+    },
+    {
+      "name": "ETC CS F V L2",
+      "halo": "verde",
+      "channels": [
+        67,
+        76,
+        85
+      ]
+    },
+    {
+      "name": "ETC CS F V L3",
+      "halo": "verde",
+      "channels": [
+        94,
+        103,
+        112
+      ]
+    },
+    {
+      "name": "MH L1",
+      "halo": "vermelho",
+      "channels": [
+        121,
+        124,
+        127,
+        130,
+        133
+      ]
+    },
+    {
+      "name": "MH L2",
+      "halo": "vermelho",
+      "channels": [
+        136,
+        139,
+        142,
+        145,
+        148
+      ]
+    },
+    {
+      "name": "RED",
+      "halo": "vermelho",
+      "channels": [
+        41,
+        50,
+        59,
+        68,
+        77,
+        86,
+        95,
+        104,
+        113
+      ]
+    },
+    {
+      "name": "GREEN",
+      "halo": "verde",
+      "channels": [
+        42,
+        51,
+        60,
+        69,
+        78,
+        87,
+        96,
+        105,
+        114
+      ]
+    },
+    {
+      "name": "BLUE",
+      "halo": "azul",
+      "channels": [
+        43,
+        52,
+        61,
+        70,
+        79,
+        88,
+        97,
+        106,
+        115
+      ]
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "submasters": [
+    {
+      "name": "PUBLIC",
+      "levels": {
+        "34": 255,
+        "35": 255,
+        "36": 255,
+        "37": 255,
+        "38": 255,
+        "39": 255
+      }
+    },
+    {
+      "name": "Sub 2",
+      "levels": {}
+    }
+  ],
+  "fx": [
+    {
+      "name": "FX 1",
+      "mode": "dinamico",
+      "steps": [],
+      "channels": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "levels": {
+        "11": 255,
+        "12": 255,
+        "13": 255,
+        "14": 255,
+        "15": 255,
+        "16": 255,
+        "17": 255,
+        "18": 255,
+        "19": 255,
+        "20": 255,
+        "21": 255,
+        "22": 255,
+        "23": 255,
+        "24": 255,
+        "25": 255,
+        "26": 255,
+        "27": 255,
+        "28": 255,
+        "29": 255,
+        "30": 255
+      },
+      "curva": "sino",
+      "ataque": 2,
+      "retirada": 2,
+      "bpm": 30,
+      "carroagem": 29,
+      "v_alto": 100,
+      "v_baixo": 0,
+      "grupos": 0,
+      "direccao": ">",
+      "blocos": "",
+      "random": 0,
+      "caos_size": 0,
+      "caos_rep": "",
+      "ritmo": 1,
+      "cruzamento": 0,
+      "quant_min": 0,
+      "quant_max": 0
+    },
+    {
+      "name": "FX 2",
+      "mode": "caos",
+      "steps": [],
+      "channels": [
+        40,
+        49,
+        58,
+        67,
+        76,
+        85,
+        94,
+        103,
+        112
+      ],
+      "levels": {
+        "40": 255,
+        "49": 255,
+        "58": 255,
+        "67": 255,
+        "76": 255,
+        "85": 255,
+        "94": 255,
+        "103": 255,
+        "112": 255
+      },
+      "curva": "pwm",
+      "ataque": 0,
+      "retirada": 0,
+      "bpm": 300,
+      "carroagem": 10,
+      "v_alto": 100,
+      "v_baixo": 0,
+      "grupos": 0,
+      "direccao": ">",
+      "blocos": "",
+      "random": 0,
+      "caos_size": 0,
+      "caos_rep": "0",
+      "ritmo": 1,
+      "cruzamento": 0,
+      "quant_min": 0,
+      "quant_max": 0
+    },
+    {
+      "name": "FX 3",
+      "mode": "manual",
+      "steps": [
+        {
+          "levels": {
+            "11": 255,
+            "12": 255,
+            "13": 255,
+            "14": 255,
+            "15": 255
+          },
+          "fade": 0.0,
+          "auto": 0.1
+        },
+        {
+          "levels": {
+            "16": 255,
+            "17": 255,
+            "18": 255,
+            "19": 255,
+            "20": 255
+          },
+          "fade": 0.0,
+          "auto": 0.1
+        },
+        {
+          "levels": {
+            "21": 255,
+            "22": 255,
+            "23": 255,
+            "24": 255,
+            "25": 255
+          },
+          "fade": 0.0,
+          "auto": 0.1
+        },
+        {
+          "levels": {
+            "26": 255,
+            "27": 255,
+            "28": 255,
+            "29": 255,
+            "30": 255
+          },
+          "fade": 0.0,
+          "auto": 0.1
+        }
+      ],
+      "channels": [],
+      "levels": {}
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "sacn_universes": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "output_cfg": {
+    "sacn_multicast": true,
+    "sacn_unicast_ip": "192.168.1.10",
+    "artnet_enabled": false,
+    "artnet_broadcast": true,
+    "artnet_dest_ip": "192.168.1.10"
+  },
+  "layouts": [
+    {
+      "id": 1,
+      "nome": "MH",
+      "celulas": [
+        {
+          "canal": 121,
+          "coluna": 4,
+          "linha": 6
+        },
+        {
+          "canal": 124,
+          "coluna": 6,
+          "linha": 6
+        },
+        {
+          "canal": 127,
+          "coluna": 8,
+          "linha": 6
+        },
+        {
+          "canal": 130,
+          "coluna": 10,
+          "linha": 6
+        },
+        {
+          "canal": 133,
+          "coluna": 12,
+          "linha": 6
+        },
+        {
+          "canal": 136,
+          "coluna": 4,
+          "linha": 4
+        },
+        {
+          "canal": 139,
+          "coluna": 6,
+          "linha": 4
+        },
+        {
+          "canal": 142,
+          "coluna": 8,
+          "linha": 4
+        },
+        {
+          "canal": 145,
+          "coluna": 10,
+          "linha": 4
+        },
+        {
+          "canal": 148,
+          "coluna": 12,
+          "linha": 4
+        }
+      ],
+      "blocos": []
+    },
+    {
+      "id": 2,
+      "nome": "PAR LED",
+      "celulas": [
+        {
+          "canal": 40,
+          "coluna": 6,
+          "linha": 5
+        },
+        {
+          "canal": 49,
+          "coluna": 8,
+          "linha": 5
+        },
+        {
+          "canal": 58,
+          "coluna": 10,
+          "linha": 5
+        },
+        {
+          "canal": 67,
+          "coluna": 6,
+          "linha": 3
+        },
+        {
+          "canal": 76,
+          "coluna": 8,
+          "linha": 3
+        },
+        {
+          "canal": 85,
+          "coluna": 10,
+          "linha": 3
+        },
+        {
+          "canal": 94,
+          "coluna": 6,
+          "linha": 1
+        },
+        {
+          "canal": 103,
+          "coluna": 8,
+          "linha": 1
+        },
+        {
+          "canal": 112,
+          "coluna": 10,
+          "linha": 1
+        }
+      ],
+      "blocos": []
+    },
+    {
+      "id": 3,
+      "nome": "FRENTE",
+      "celulas": [
+        {
+          "canal": 1,
+          "coluna": 5,
+          "linha": 5
+        },
+        {
+          "canal": 2,
+          "coluna": 7,
+          "linha": 5
+        },
+        {
+          "canal": 3,
+          "coluna": 9,
+          "linha": 5
+        },
+        {
+          "canal": 4,
+          "coluna": 11,
+          "linha": 5
+        },
+        {
+          "canal": 5,
+          "coluna": 13,
+          "linha": 5
+        },
+        {
+          "canal": 6,
+          "coluna": 5,
+          "linha": 3
+        },
+        {
+          "canal": 7,
+          "coluna": 7,
+          "linha": 3
+        },
+        {
+          "canal": 8,
+          "coluna": 9,
+          "linha": 3
+        },
+        {
+          "canal": 9,
+          "coluna": 11,
+          "linha": 3
+        },
+        {
+          "canal": 10,
+          "coluna": 13,
+          "linha": 3
+        }
+      ],
+      "blocos": []
+    },
+    {
+      "id": 4,
+      "nome": "PAR64",
+      "celulas": [
+        {
+          "canal": 11,
+          "coluna": 4,
+          "linha": 3
+        },
+        {
+          "canal": 12,
+          "coluna": 5,
+          "linha": 3
+        },
+        {
+          "canal": 13,
+          "coluna": 6,
+          "linha": 3
+        },
+        {
+          "canal": 14,
+          "coluna": 7,
+          "linha": 3
+        },
+        {
+          "canal": 15,
+          "coluna": 8,
+          "linha": 3
+        },
+        {
+          "canal": 16,
+          "coluna": 9,
+          "linha": 3
+        },
+        {
+          "canal": 17,
+          "coluna": 10,
+          "linha": 3
+        },
+        {
+          "canal": 18,
+          "coluna": 11,
+          "linha": 3
+        },
+        {
+          "canal": 19,
+          "coluna": 12,
+          "linha": 3
+        },
+        {
+          "canal": 20,
+          "coluna": 13,
+          "linha": 3
+        },
+        {
+          "canal": 21,
+          "coluna": 4,
+          "linha": 1
+        },
+        {
+          "canal": 22,
+          "coluna": 5,
+          "linha": 1
+        },
+        {
+          "canal": 23,
+          "coluna": 6,
+          "linha": 1
+        },
+        {
+          "canal": 24,
+          "coluna": 7,
+          "linha": 1
+        },
+        {
+          "canal": 25,
+          "coluna": 8,
+          "linha": 1
+        },
+        {
+          "canal": 26,
+          "coluna": 9,
+          "linha": 1
+        },
+        {
+          "canal": 27,
+          "coluna": 10,
+          "linha": 1
+        },
+        {
+          "canal": 28,
+          "coluna": 11,
+          "linha": 1
+        },
+        {
+          "canal": 29,
+          "coluna": 12,
+          "linha": 1
+        },
+        {
+          "canal": 30,
+          "coluna": 13,
+          "linha": 1
+        }
+      ],
+      "blocos": []
+    }
+  ],
+  "layout_teclas": [
+    "R",
+    "G",
+    "B",
+    "BM",
+    "GY",
+    "ZOOM",
+    "STROBE",
+    "PAN",
+    "TILT",
+    "FANS"
+  ]
+}

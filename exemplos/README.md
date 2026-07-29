@@ -6,7 +6,9 @@ Ficheiros de demonstração para experimentar a MESADELUX sem começar do zero.
 
 ### Conteúdo
 
-- `exempl2.ldsk` — ficheiro de show de demonstração (150 canais).
+- `exempl3.ldsk` — ficheiro de show de demonstração (150 canais), agora
+  com **4 páginas de Layout** (MH, PAR LED, FRENTE, PAR64) e as teclas de
+  atributo já preenchidas (R, G, B, BM, GY, ZOOM, STROBE, PAN, TILT, FANS).
 
 Para abrir: **Ficheiro → Abrir** e escolher o `.ldsk`.
 
@@ -29,9 +31,29 @@ Para abrir: **Ficheiro → Abrir** e escolher o `.ldsk`.
 - **3 efeitos (FX)** gravados — dinâmico, Caos e manual — para ligar e
   desligar na página FX ou a partir das memórias.
 
-### Novidades da v6.4.2 — experimenta com o exempl2
+### Novidades da v6.5 — Layouts
 
-Duas teclas novas desta versão, boas de experimentar com este show:
+![Vista de Layout com o show de exemplo](LAYOUT.jpg)
+
+Vista de **Layout** ao estilo GrandMA: uma grelha de células, uma por
+aparelho, organizada em **páginas** (no exemplo: MH, PAR LED, FRENTE,
+PAR64). Tecla **LY** ao lado da DMX (ciclo CH → LY → DMX).
+
+- **Selecção** — clicar numa célula selecciona/desselecciona; arrastar faz
+  um laço. É a mesma selecção da grelha de canais e da consola.
+- **Teclas de atributo** (barra de baixo, 8 nomeáveis: R, G, B, ZOOM,
+  STROBE…) — carrega numa e a selecção filtra para os canais com esse
+  nome, e o valor do atributo aparece em cada célula. Sem nenhuma
+  carregada, dar valor é sempre dimmer (0–100%). O **P/T** também mostra
+  os valores de PAN/TILT nas células.
+- **Editar** — botão **EDIT**: arrasta as células para as arrumar (com
+  íman de grelha), botão direito tira a célula. Para pôr aparelhos numa
+  página: selecciona → **COMPRAR** → **LY** → tecla da página (ou **+**
+  para criar uma nova). Tudo com Ctrl+Z.
+
+### Novidades da v6.4.2
+
+Duas teclas desta versão, boas de experimentar com este show:
 
 - **AGARRA/LARGA (catch/drop)** — congela canais no valor em que estão.
   Prime **AGARRA**: os canais do programador (azuis) e os seleccionados
@@ -159,7 +181,9 @@ Demo files to try MESADELUX without starting from scratch.
 
 ### Contents
 
-- `exempl2.ldsk` — demo show file (150 channels).
+- `exempl3.ldsk` — demo show file (150 channels), now with **4 Layout
+  pages** (MH, PAR LED, FRENTE, PAR64) and the attribute keys already
+  filled in (R, G, B, BM, GY, ZOOM, STROBE, PAN, TILT, FANS).
 
 To open it: **File → Open** and pick the `.ldsk`.
 
@@ -182,9 +206,29 @@ To open it: **File → Open** and pick the `.ldsk`.
 - **3 recorded effects (FX)** — dynamic, Chaos and manual — to toggle from
   the FX page or from the cues.
 
-### New in v6.4.2 — try it with exempl2
+### New in v6.5 — Layouts
 
-Two new keys in this version, worth trying with this show:
+![Layout view with the example show](LAYOUT.jpg)
+
+A GrandMA-style **Layout** view: a grid of cells, one per fixture,
+arranged in **pages** (here: MH, PAR LED, FRENTE, PAR64). **LY** key next
+to DMX (cycle CH → LY → DMX).
+
+- **Selection** — click a cell to select/deselect; drag for a lasso. It's
+  the same selection as the channel grid and the console.
+- **Attribute keys** (bottom bar, 8 nameable: R, G, B, ZOOM, STROBE…) —
+  press one and the selection filters to the channels with that name, and
+  the attribute value shows in each cell. With none pressed, giving a
+  value is always dimmer (0–100%). **P/T** also shows the PAN/TILT values
+  in the cells.
+- **Edit** — **EDIT** button: drag cells to arrange them (grid snap),
+  right-click removes a cell. To put fixtures on a page: select →
+  **TAKE** → **LY** → the page key (or **+** to create a new one).
+  All with Ctrl+Z.
+
+### New in v6.4.2
+
+Two keys from this version, worth trying with this show:
 
 - **CATCH/DROP** — freezes channels at their current value. Press
   **CATCH**: the programmer (blue) channels and the selected ones are
